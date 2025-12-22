@@ -1,0 +1,743 @@
+:root {
+    --primary-color: #2E1300;
+    --accent-color: #c5a47e;
+    --bg-light: #f9f9f9;
+    --text-dark: #333;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--primary-color);
+}
+
+.navbar {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 15px 0;
+}
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--primary-color) !important;
+}
+.nav-link {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin: 0 10px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.nav-link:hover {
+    color: var(--accent-color);
+}
+
+.hero-section {
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../static/1.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+.hero-title {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+.hero-subtitle {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+.hero-btn {
+    display: inline-block;       /* Щоб працювали відступи */
+    background-color: var(--accent-color);
+    color: #fff;
+    text-decoration: none;       /* Прибираємо підкреслення посилання */
+    text-transform: uppercase;   /* Усі літери великі */
+    font-weight: 600;
+    letter-spacing: 1px;         /* Розрядка між літерами */
+    font-size: 1.1rem;           /* Трохи більший шрифт */
+    padding: 15px 40px;          /* Великі відступи (аналог btn-lg) */
+    border: none;
+    border-radius: 0;            /* Гострі кути (як у вашому дизайні) */
+    transition: all 0.3s ease;   /* Плавна анімація */
+    cursor: pointer;
+}
+
+.hero-btn:hover {
+    background-color: #b08d66;   /* Трохи темніший відтінок при наведенні */
+    color: #fff;
+    transform: translateY(-2px); /* Легкий підйом кнопки */
+}
+.btn-custom {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    transition: 0.3s;
+}
+.btn-custom:hover {
+    background-color: #b08d66;
+    color: white;
+}
+
+.booking-bar {
+    background: #fff;
+    padding: 30px;
+    margin-top: -50px;
+    position: relative;
+    z-index: 10;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    border-radius: 5px;
+}
+.form-label {
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: #888;
+}
+
+.about-section {
+    padding: 80px 0;
+}
+.about-text p {
+    margin-bottom: 20px;
+    font-size: 1.05rem;
+}
+/* --- Стилі для оновленої секції Про Нас --- */
+
+.section-padding {
+    padding: 100px 0;
+}
+
+/* Типографіка секцій */
+.section-subtitle {
+    color: var(--accent-color);
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+
+.section-title-sm {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+/* Оформлення зображення з бейджем */
+.about-img-wrapper {
+    position: relative;
+    padding-bottom: 20px;
+    padding-right: 20px;
+}
+
+.about-img-wrapper .main-img {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    /* Легкий ефект збільшення при наведенні на фото не обов'язковий, але виглядає гарно */
+    transition: transform 0.5s ease;
+}
+
+/* Бейдж "Років досвіду" - плаваючий блок */
+.experience-badge {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 20px 30px;
+    z-index: 2;
+    text-align: center;
+    box-shadow: -5px 5px 20px rgba(0,0,0,0.2);
+    min-width: 140px;
+}
+
+.experience-badge .years {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--accent-color);
+}
+
+.experience-badge .text {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Картки переваг (Why Choose Us) */
+.feature-card {
+    background: #fff;
+    padding: 30px 20px;
+    border: 1px solid #eee; /* Дуже тонка рамка */
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px); /* Піднімається вверх */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08); /* Тінь стає м'якшою і більшою */
+    border-color: transparent;
+}
+
+.icon-box {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    border-radius: 50%;
+    background-color: #fcf8f3; /* Світла підкладка під іконку */
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover .icon-box {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.feature-card h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+.rooms-section {
+    background-color: var(--bg-light);
+    padding: 80px 0;
+}
+.card-room {
+    border: none;
+    transition: 0.3s;
+    background: white;
+    margin-bottom: 30px;
+}
+.card-room:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+}
+.price-tag {
+    color: var(--accent-color);
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+/* --- Стилі для секції Номери (Rooms) --- */
+
+.rooms-section {
+    background-color: #f8f9fa; /* Світло-сірий фон для контрасту */
+}
+
+/* Текст вступу */
+.room-intro-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto 15px auto;
+}
+
+/* Панель зручностей (іконки) */
+.amenities-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.amenity-item {
+    background: #fff;
+    padding: 8px 15px;
+    border-radius: 30px;
+    border: 1px solid #e0e0e0;
+    color: #555;
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.amenity-item i {
+    color: var(--accent-color);
+    margin-right: 8px;
+    font-size: 1.1rem;
+}
+
+/* Картка номера */
+.room-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%; /* Щоб всі картки в ряду були однакової висоти */
+    display: flex;
+    flex-direction: column;
+}
+
+.room-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+/* Зображення номера */
+.room-img-wrap {
+    position: relative;
+    height: 300px; /* Фіксована висота фото */
+    overflow: hidden;
+}
+
+.room-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Фото обрізається, щоб заповнити блок */
+    transition: transform 0.5s ease;
+}
+
+.room-card:hover .room-img-wrap img {
+    transform: scale(1.05); /* Легкий зум при наведенні */
+}
+
+/* Бейдж ціни */
+.price-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(46, 19, 0, 0.85); /* Основний колір з прозорістю */
+    color: #fff;
+    padding: 8px 15px;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    z-index: 2;
+    border-radius: 4px;
+}
+
+/* Тіло картки (контент) */
+.room-body {
+    padding: 25px;
+    flex-grow: 1; /* Розтягує контент, щоб кнопки були знизу */
+    display: flex;
+    flex-direction: column;
+}
+
+.room-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    margin: 0;
+    color: var(--primary-color);
+}
+
+.room-stars i {
+    color: #FFD700; /* Золоті зірки */
+    font-size: 0.8rem;
+    margin-right: 2px;
+}
+
+/* Футер картки (іконки + кнопка) */
+.room-footer {
+    margin-top: auto; /* Притискає цей блок до низу */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.room-specs {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.room-specs li {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.room-specs li i {
+    color: var(--accent-color);
+    margin-right: 5px;
+}
+
+/* Кнопка "Забронювати" в картці */
+.btn-outline-custom {
+    border: 2px solid var(--accent-color);
+    color: var(--primary-color);
+    padding: 6px 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    border-radius: 0;
+    transition: all 0.3s;
+}
+
+.btn-outline-custom:hover {
+    background-color: var(--accent-color);
+    color: #fff;
+}
+/* Features/Services */
+.features-section {
+    padding: 80px 0;
+    background-color: #2E1300;
+    color: white;
+}
+.features-section h2 {
+    color: white;
+}
+.feature-box {
+    text-align: center;
+    padding: 20px;
+}
+.feature-icon {
+    font-size: 3rem;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+}
+/* --- Секція Сауна (Оновлена) --- */
+.sauna-section {
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.title-separator {
+    width: 60px;
+    height: 3px;
+    background-color: var(--accent-color);
+    margin-top: 20px;
+}
+
+/* =========================================
+   СЕКЦІЯ САУНА (Pure CSS Layout)
+   ========================================= */
+
+.sauna-section {
+    background-color: #fff;
+    padding: 100px 0;
+    overflow: hidden;
+}
+
+/* Обгортка-контейнер (замість .container) */
+.sauna-wrapper {
+    max-width: 1200px; /* Стандартна ширина контейнера */
+    margin: 0 auto;    /* Центрування блоку */
+    padding: 0 15px;   /* Відступи по боках для мобільних */
+}
+
+/* --- Заголовок секції --- */
+.sauna-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title-separator {
+    width: 60px;
+    height: 3px;
+    background-color: var(--accent-color);
+    margin: 20px auto 0 auto; /* auto по боках центрує лінію */
+}
+
+/* --- Основна сітка (Layout) --- */
+.sauna-layout {
+    display: flex;
+    align-items: center; /* Центрування по вертикалі */
+    gap: 4rem;           /* Відступ між фото і текстом */
+}
+
+/* Колонка з фото */
+.sauna-media {
+    flex: 1.3; /* Займає трохи більше місця (як col-lg-7) */
+    display: flex;
+    justify-content: center; /* Центрує .sauna-image-box всередині колонки */
+}
+
+/* Колонка з текстом */
+.sauna-info {
+    flex: 1;   /* Займає решту місця (як col-lg-5) */
+}
+
+/* --- Стилізація фото (Box) --- */
+.sauna-image-box {
+    position: relative;
+    z-index: 1;
+    padding: 10px;
+    /* Центрування самого блоку */
+    width: fit-content;
+    max-width: 100%;
+}
+
+.sauna-image-box .main-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    position: relative;
+    z-index: 2;
+}
+
+.sauna-image-box .img-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--accent-color);
+    border-radius: 8px;
+    z-index: 1;
+    opacity: 0.3;
+    /*transform: translate(-15px, -15px);*/
+
+}
+
+/* --- Текстовий контент --- */
+.sauna-desc {
+    font-size: 1.15rem;
+    color: #6c757d; /* text-muted */
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.sauna-quote {
+    background-color: #fcf8f3;
+    border-left: 4px solid var(--accent-color);
+    padding: 15px 20px;
+    border-radius: 0 5px 5px 0;
+    font-style: italic;
+    color: #555;
+    margin-bottom: 2rem;
+}
+.sauna-quote p { margin: 0; }
+
+.sauna-list-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+/* --- Сітка переваг (Grid замість .row) --- */
+.sauna-features-grid {
+    display: grid;
+    /* Дві колонки однакової ширини */
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+}
+
+.feature-item .icon-circle {
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border: 1px solid #eaddcf;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+    color: var(--accent-color);
+    font-size: 1rem;
+    flex-shrink: 0;
+    transition: 0.3s;
+}
+
+.feature-item:hover .icon-circle {
+    background-color: var(--accent-color);
+    color: white;
+    transform: scale(1.1);
+}
+
+.feature-item span {
+    font-weight: 600;
+    color: #333;
+}
+
+/* --- Кнопка --- */
+.sauna-actions {
+    /* Вирівнювання кнопки зліва (за замовчуванням) */
+    text-align: left;
+}
+
+.btn-sauna {
+    display: inline-block; /* Щоб поводилась як кнопка, а не текст */
+    background-color: var(--accent-color);
+    color: #fff;
+    text-decoration: none; /* Прибираємо підкреслення */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    padding: 15px 40px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(197, 164, 126, 0.4);
+}
+
+.btn-sauna:hover {
+    background-color: #2E1300;
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(46, 19, 0, 0.3);
+}
+
+/* =========================================
+   АДАПТИВНІСТЬ (Мобільні пристрої)
+   ========================================= */
+@media (max-width: 991px) {
+    .sauna-layout {
+        flex-direction: column; /* Складаємо колонки одна під одну */
+        gap: 3rem;
+    }
+
+    .sauna-media, .sauna-info {
+        width: 100%;
+        flex: auto;
+    }
+
+    .sauna-features-grid {
+        grid-template-columns: 1fr; /* Одна колонка списку на телефонах */
+    }
+
+    .sauna-actions {
+        text-align: center; /* Центруємо кнопку на телефоні */
+    }
+
+    .btn-sauna {
+        width: 100%; /* Кнопка на всю ширину */
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    .sauna-image-box .img-backdrop {
+        display: none; /* Прибираємо декор на мобільному */
+    }
+}
+/* Footer */
+footer {
+    background-color: #1a1a1a;
+    color: #888;
+    padding: 50px 0 20px;
+}
+.footer-title {
+    color: white;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 20px;
+}
+.contact-link {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+.contact-link:hover {
+    color: var(--accent-color);
+}
+.social-icons a {
+    color: white;
+    margin-right: 15px;
+    font-size: 1.2rem;
+}
+
+
+/* --- Стилі для сторінки детального опису номеру --- */
+
+/* Посилання "Назад" */
+.back-link {
+    display: inline-block;
+    color: #666;
+    text-decoration: none;
+    font-weight: 600;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+.back-link:hover {
+    color: var(--accent-color);
+    transform: translateX(-5px);
+}
+
+/* Слайдер */
+.room-slider-img {
+    height: 500px; /* Фіксована висота слайдера */
+    object-fit: cover; /* Фото обрізається, але не розтягується */
+}
+
+/* Список зручностей (Grid) */
+.room-amenities-list {
+    color: #555;
+    font-size: 1rem;
+}
+.room-amenities-list i {
+    color: var(--accent-color);
+    width: 25px; /* Щоб текст рівнявся рівно */
+    text-align: center;
+}
+
+/* Сайдбар бронювання */
+.booking-sidebar {
+    background-color: #fdfdfd;
+    border: 1px solid #eee;
+    position: sticky; /* Панель "прилипає" при прокрутці */
+    top: 100px;
+}
+
+.booking-sidebar .current-price {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    font-weight: 700;
+    line-height: 1;
+}
+
+/* Адаптивність для мобільних */
+@media (max-width: 768px) {
+    .room-slider-img {
+        height: 300px; /* Менша висота на телефонах */
+    }
+    .booking-sidebar {
+        position: static; /* На мобільному сайдбар не липне */
+        margin-top: 30px;
+    }
+}
