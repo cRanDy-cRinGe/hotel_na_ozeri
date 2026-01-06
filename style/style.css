@@ -1,5 +1,7 @@
 :root {
-    --primary-color: #2E1300;
+    --primary-color: #1B3629;
+    --primary-light: #2A523E;
+    --primary-dark: #12241b;
     --accent-color: #c5a47e;
     --bg-light: #f9f9f9;
     --text-dark: #333;
@@ -16,33 +18,138 @@ h1, h2, h3 {
     color: var(--primary-color);
 }
 
+
+
 .navbar {
-    background-color: #fff;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    padding: 15px 0;
-}
-.navbar-brand {
-    font-weight: 700;
-    font-size: 1.5rem;
-    color: var(--primary-color) !important;
-}
-.nav-link {
-    color: var(--primary-color);
-    font-weight: 600;
-    margin: 0 10px;
-    text-transform: uppercase;
-    font-size: 0.9rem;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+    border: none;
+
+
+    padding: 20px 0;
+
+    transition: all 0.4s ease;
 }
 
-.nav-link:hover {
-    color: var(--accent-color);
+/* Логотип */
+.navbar-brand {
+
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-size: 2.2rem;
+
+    color: var(--primary-color) !important;
+
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 0.3s ease;
 }
+
+.navbar-brand:hover {
+    transform: scale(1.02);
+}
+
+
+.nav-link {
+
+    font-family: 'Montserrat', sans-serif;
+    color: var(--primary-color) !important;
+    font-weight: 600;
+    font-size: 0.85rem;
+
+    margin: 0 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    transition: color 0.3s ease;
+    padding-bottom: 5px;
+}
+
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: var(--accent-color);
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+
+.navbar .btn-custom {
+
+    font-family: 'Montserrat', sans-serif;
+
+    background-color: var(--primary-color);
+    color: #fff;
+
+    border-radius: 0;
+    border: none;
+
+    padding: 12px 35px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 15px rgba(27, 54, 41, 0.2);
+}
+
+.navbar .btn-custom:hover {
+
+    background-color:var(--primary-light);
+    color: #fff;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+
+.navbar-toggler {
+    border: none;
+    padding: 0;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar-toggler-icon {
+    width: 1.8em;
+    height: 1.8em;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(27, 54, 41, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2.5' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 .hero-section {
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../static/1.jpg');
+
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url('../static/1.jpg');
     background-size: cover;
     background-position: center;
     height: 85vh;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -50,37 +157,70 @@ h1, h2, h3 {
     color: white;
     position: relative;
 }
+
 .hero-title {
-    font-size: 3.5rem;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 25px;
+
+
+    text-shadow: 0 4px 20px rgba(0,0,0,0.5);
+
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards;
 }
+
 .hero-subtitle {
-    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 500;
     max-width: 700px;
-    margin: 0 auto 30px;
+    margin: 0 auto 45px;
+    letter-spacing: 0.5px;
+
+    text-shadow: 0 2px 10px rgba(0,0,0,0.7);
+
+    opacity: 0;
+    animation: fadeInUp 1s ease-out 0.3s forwards;
 }
+
 .hero-btn {
-    display: inline-block;       /* Щоб працювали відступи */
-    background-color: var(--accent-color);
+    display: inline-block;
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+
+
+    background-color: var(--primary-color);
     color: #fff;
-    text-decoration: none;       /* Прибираємо підкреслення посилання */
-    text-transform: uppercase;   /* Усі літери великі */
-    font-weight: 600;
-    letter-spacing: 1px;         /* Розрядка між літерами */
-    font-size: 1.1rem;           /* Трохи більший шрифт */
-    padding: 15px 40px;          /* Великі відступи (аналог btn-lg) */
+
+    padding: 18px 50px;
     border: none;
-    border-radius: 0;            /* Гострі кути (як у вашому дизайні) */
-    transition: all 0.3s ease;   /* Плавна анімація */
+    border-radius: 0;
     cursor: pointer;
+    text-decoration: none;
+
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+
+    opacity: 0;
+    animation: fadeInUp 1s ease-out 0.6s forwards;
 }
 
 .hero-btn:hover {
-    background-color: #b08d66;   /* Трохи темніший відтінок при наведенні */
+
+    background-color: var(--primary-light);
     color: #fff;
-    transform: translateY(-2px); /* Легкий підйом кнопки */
+
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
 }
+
 .btn-custom {
     background-color: var(--accent-color);
     color: white;
@@ -92,26 +232,273 @@ h1, h2, h3 {
     transition: 0.3s;
 }
 .btn-custom:hover {
-    background-color: #b08d66;
+    background-color: var(--primary-color);
     color: white;
+}
+
+@keyframes fadeInUpBar {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 .booking-bar {
     background: #fff;
-    padding: 30px;
-    margin-top: -50px;
+    padding: 30px 40px;
+    margin-top: -60px;
     position: relative;
-    z-index: 10;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-    border-radius: 5px;
-}
-.form-label {
-    font-weight: 600;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    color: #888;
+    z-index: 50;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+    border-top: 4px solid var(--primary-color);
+    border-radius: 4px;
 }
 
+.form-label {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: var(--primary-color);
+    margin-bottom: 8px;
+    display: block;
+}
+
+.input-wrapper, .custom-select-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.input-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--primary-color);
+    z-index: 10;
+    pointer-events: none;
+    font-size: 1.2rem;
+}
+
+.form-control,
+.select-selected {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #606060;
+    background-color: #fff;
+    border: 1px solid #dddddd;
+    border-radius: 0.375rem;
+    height: 55px;
+    width: 100%;
+    padding: 0 45px 0 35px; /* Більше відступ справа для іконки, зліва для стрілки */
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.form-control:hover, .select-selected:hover {
+    border-color: var(--primary-color);
+    background-color: #fff;
+}
+
+.form-control:focus, .select-selected.select-arrow-active {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(27, 54, 41, 0.2);
+    outline: none;
+
+}
+.select-selected.select-arrow-active {
+    border-radius: 0.375rem 0.375rem 0 0 ;
+}
+/* --- Логіка та стилі випадаючого списку гостей --- */
+.custom-select-wrapper select {
+    display: none;
+    border-radius: 0.375rem 0.375rem 0 0 ;
+}
+
+.select-selected::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 15px; /* Стрілка зліва */
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    transform: translateY(-60%) rotate(45deg);
+    transition: 0.3s;
+}
+
+.select-selected.select-arrow-active::after {
+    transform: translateY(-10%) rotate(-135deg);
+}
+
+.select-items {
+    position: absolute;
+    background-color: #fff;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    border: 1px solid var(--primary-color);
+    border-top: none;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    max-height: 0;
+    opacity: 0;
+    border-radius: 0 0  0.375rem 0.375rem;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.select-items:not(.select-hide) {
+    max-height: 300px;
+    opacity: 1;
+    padding-top: 5px;
+}
+
+.select-items div {
+    color: #333;
+    padding: 12px 20px;
+    padding-left: 45px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    transition: 0.2s;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.select-items div:hover, .same-as-selected {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.booking-bar .btn-custom {
+    height: 55px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    width: 100%;
+    border-radius: 0;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.booking-bar .btn-custom:hover {
+    background-color: var(--primary-light);
+    color: #fff;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+/* --- Логіка та стилі випадаючого вікна дат (Flatpickr) --- */
+.flatpickr-calendar {
+    font-family: 'Montserrat', sans-serif;
+    border: none !important;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2) !important;
+    border-radius: 8px !important;
+    margin-top: 5px;
+}
+
+.flatpickr-day.selected,
+.flatpickr-day.startRange,
+.flatpickr-day.endRange {
+    background: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+}
+
+.flatpickr-day:hover {
+    background: #f0f0f0;
+}
+
+.flatpickr-months .flatpickr-month {
+    background: var(--primary-color);
+    color: #fff;
+    border-radius: 8px 8px 0 0;
+    height: 50px;
+    padding-top: 15px;
+}
+
+.flatpickr-current-month .flatpickr-monthDropdown-months,
+.flatpickr-current-month input.cur-year {
+    color: #fff !important;
+    font-weight: 700;
+}
+
+.flatpickr-weekdays {
+    background: var(--primary-color);
+}
+
+.flatpickr-weekday {
+    color: rgba(255,255,255,0.8) !important;
+    font-weight: 400;
+}
+
+/* Стрілки навігації календаря (білі) */
+.flatpickr-months .flatpickr-prev-month,
+.flatpickr-months .flatpickr-next-month {
+    fill: #fff !important;
+    color: #fff !important;
+    padding-top: 10px;
+}
+
+.flatpickr-months .flatpickr-prev-month:hover svg,
+.flatpickr-months .flatpickr-next-month:hover svg {
+    fill: #ddd !important;
+}
+
+/* Випадаючий список вибору місяця (фікс сірого фону) */
+.flatpickr-monthDropdown-months {
+    background-color: var(--primary-color) !important;
+    color: #fff !important;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    border: none !important;
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+
+.flatpickr-monthDropdown-months option {
+    background-color: var(--primary-light);
+    color: #fff;
+    padding: 10px;
+}
+
+.flatpickr-current-month .flatpickr-monthDropdown-months:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Стрілочки вибору року (білі) */
+.flatpickr-current-month .numInputWrapper span.arrowUp:after {
+    border-bottom-color: #fff !important;
+}
+
+.flatpickr-current-month .numInputWrapper span.arrowDown:after {
+    border-top-color: #fff !important;
+}
+
+.flatpickr-current-month .numInputWrapper span:hover {
+    background: rgba(255,255,255,0.2) !important;
+}
+
+.flatpickr-current-month input.cur-year:focus {
+    outline: none;
+    color: #fff !important;
+}
+
+@media (max-width: 768px) {
+    .booking-bar {
+        padding: 25px 20px;
+        margin-top: 0;
+    }
+    .booking-bar .col-md-3 {
+        margin-bottom: 15px;
+    }
+}
 .about-section {
     padding: 80px 0;
 }
@@ -119,7 +506,7 @@ h1, h2, h3 {
     margin-bottom: 20px;
     font-size: 1.05rem;
 }
-/* --- Стилі для оновленої секції Про Нас --- */
+
 
 .section-padding {
     padding: 100px 0;
@@ -148,7 +535,7 @@ h1, h2, h3 {
     margin-bottom: 15px;
 }
 
-/* Оформлення зображення з бейджем */
+
 .about-img-wrapper {
     position: relative;
     padding-bottom: 20px;
@@ -159,11 +546,9 @@ h1, h2, h3 {
     position: relative;
     z-index: 1;
     width: 100%;
-    /* Легкий ефект збільшення при наведенні на фото не обов'язковий, але виглядає гарно */
     transition: transform 0.5s ease;
 }
 
-/* Бейдж "Років досвіду" - плаваючий блок */
 .experience-badge {
     position: absolute;
     bottom: 0;
@@ -173,7 +558,8 @@ h1, h2, h3 {
     padding: 20px 30px;
     z-index: 2;
     text-align: center;
-    box-shadow: -5px 5px 20px rgba(0,0,0,0.2);
+    /* Зеленувата тінь */
+    box-shadow: -5px 5px 20px rgba(27, 54, 41, 0.3);
     min-width: 140px;
 }
 
@@ -191,37 +577,49 @@ h1, h2, h3 {
     letter-spacing: 1px;
 }
 
-/* Картки переваг (Why Choose Us) */
+
 .feature-card {
     background: #fff;
     padding: 30px 20px;
-    border: 1px solid #eee; /* Дуже тонка рамка */
+    border: 1px solid #eee;
     transition: all 0.3s ease;
     height: 100%;
 }
 
 .feature-card:hover {
-    transform: translateY(-10px); /* Піднімається вверх */
-    box-shadow: 0 15px 30px rgba(0,0,0,0.08); /* Тінь стає м'якшою і більшою */
+    transform: translateY(-10px);
+    /* Тінь при наведенні стає насиченішою зеленою */
+    box-shadow: 0 15px 30px rgba(27, 54, 41, 0.15);
     border-color: transparent;
 }
 
 .icon-box {
     font-size: 2.5rem;
-    color: var(--accent-color);
+
+
+    color: var(--primary-color);
+
     margin-bottom: 20px;
     display: inline-block;
     width: 70px;
     height: 70px;
     line-height: 70px;
     border-radius: 50%;
-    background-color: #fcf8f3; /* Світла підкладка під іконку */
-    transition: all 0.3s ease;
+
+
+    background-color: rgba(27, 54, 41, 0.05);
+
+    transition: all 0.4s ease;
 }
 
 .feature-card:hover .icon-box {
-    background-color: var(--accent-color);
+
+    background-color: var(--primary-color);
     color: white;
+
+
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(27, 54, 41, 0.3);
 }
 
 .feature-card h4 {
@@ -230,6 +628,7 @@ h1, h2, h3 {
     margin-bottom: 15px;
     color: var(--primary-color);
 }
+
 .rooms-section {
     background-color: var(--bg-light);
     padding: 80px 0;
@@ -249,18 +648,19 @@ h1, h2, h3 {
     object-fit: cover;
 }
 .price-tag {
-    color: var(--accent-color);
+    color: var(--primary-color);
     font-weight: 700;
     font-size: 1.5rem;
 }
 
-/* --- Стилі для секції Номери (Rooms) --- */
+
 
 .rooms-section {
-    background-color: #f8f9fa; /* Світло-сірий фон для контрасту */
+
+    background-color: #f4f6f5;
 }
 
-/* Текст вступу */
+
 .room-intro-text p {
     font-size: 1.1rem;
     line-height: 1.8;
@@ -268,7 +668,7 @@ h1, h2, h3 {
     margin: 0 auto 15px auto;
 }
 
-/* Панель зручностей (іконки) */
+
 .amenities-bar {
     display: flex;
     flex-wrap: wrap;
@@ -287,67 +687,81 @@ h1, h2, h3 {
     font-weight: 600;
     display: flex;
     align-items: center;
+    transition: 0.3s;
+}
+
+.amenity-item:hover {
+    border-color: var(--primary-color);
+    background-color: #fff;
 }
 
 .amenity-item i {
-    color: var(--accent-color);
+    color: var(--primary-color);
     margin-right: 8px;
     font-size: 1.1rem;
 }
 
-/* Картка номера */
+
 .room-card {
     background: #fff;
-    border-radius: 8px;
+    border-radius: 4px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: 100%; /* Щоб всі картки в ряду були однакової висоти */
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-bottom 0.3s ease;
+    height: 100%;
     display: flex;
     flex-direction: column;
+
+
+    border-bottom: 3px solid transparent;
 }
 
 .room-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+
+
+    border-bottom: 3px solid var(--primary-color);
 }
 
-/* Зображення номера */
+
 .room-img-wrap {
     position: relative;
-    height: 300px; /* Фіксована висота фото */
+    height: 300px;
     overflow: hidden;
 }
 
 .room-img-wrap img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Фото обрізається, щоб заповнити блок */
+    object-fit: cover;
     transition: transform 0.5s ease;
 }
 
 .room-card:hover .room-img-wrap img {
-    transform: scale(1.05); /* Легкий зум при наведенні */
+    transform: scale(1.05);
 }
 
-/* Бейдж ціни */
+
 .price-badge {
     position: absolute;
     top: 20px;
     right: 20px;
-    background-color: rgba(46, 19, 0, 0.85); /* Основний колір з прозорістю */
+
+    background-color: rgba(27, 54, 41, 0.9);
     color: #fff;
     padding: 8px 15px;
     font-family: 'Playfair Display', serif;
     font-size: 1.2rem;
     z-index: 2;
-    border-radius: 4px;
+    border-radius: 0;
 }
 
-/* Тіло картки (контент) */
+
 .room-body {
     padding: 25px;
-    flex-grow: 1; /* Розтягує контент, щоб кнопки були знизу */
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
 }
@@ -360,14 +774,15 @@ h1, h2, h3 {
 }
 
 .room-stars i {
-    color: #FFD700; /* Золоті зірки */
+
+    color: var(--accent-color);
     font-size: 0.8rem;
     margin-right: 2px;
 }
 
-/* Футер картки (іконки + кнопка) */
+
 .room-footer {
-    margin-top: auto; /* Притискає цей блок до низу */
+    margin-top: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -389,13 +804,15 @@ h1, h2, h3 {
 }
 
 .room-specs li i {
-    color: var(--accent-color);
+
+    color: var(--primary-color);
     margin-right: 5px;
 }
 
-/* Кнопка "Забронювати" в картці */
+
 .btn-outline-custom {
-    border: 2px solid var(--accent-color);
+
+    border: 2px solid var(--primary-color);
     color: var(--primary-color);
     padding: 6px 20px;
     font-weight: 600;
@@ -406,13 +823,16 @@ h1, h2, h3 {
 }
 
 .btn-outline-custom:hover {
-    background-color: var(--accent-color);
+
+    background-color: var(--primary-color);
     color: #fff;
 }
-/* Features/Services */
+
+
 .features-section {
     padding: 80px 0;
-    background-color: #2E1300;
+
+    background-color: var(--primary-color);
     color: white;
 }
 .features-section h2 {
@@ -427,37 +847,58 @@ h1, h2, h3 {
     color: var(--accent-color);
     margin-bottom: 20px;
 }
-/* --- Секція Сауна (Оновлена) --- */
-.sauna-section {
-    background-color: #fff;
-    overflow: hidden;
+
+/* --- Restaurant Section Styles --- */
+
+.restaurant-text p {
+    margin-bottom: 15px;
+    font-size: 1rem;
+    line-height: 1.7;
 }
 
-.title-separator {
-    width: 60px;
-    height: 3px;
-    background-color: var(--accent-color);
-    margin-top: 20px;
+/* Блок з телефоном */
+.restaurant-cta {
+    background-color: #f8f9fa; /* Світло-сірий фон */
+    border-color: var(--primary-color) !important; /* Зелена лінія зліва */
+    border-radius: 0 4px 4px 0;
 }
 
-/* =========================================
-   СЕКЦІЯ САУНА (Pure CSS Layout)
-   ========================================= */
+.restaurant-cta h5 {
+    font-family: 'Playfair Display', serif;
+    color: var(--primary-color);
+}
+
+/* Адаптація фотографій */
+.object-fit-cover {
+    object-fit: cover;
+}
+
+@media (max-width: 991px) {
+    /* На мобільних міняємо порядок, щоб текст був першим, а фото знизу */
+    .order-lg-1 {
+        order: 2;
+        margin-top: 30px;
+    }
+    .order-lg-2 {
+        order: 1;
+    }
+}
+
 
 .sauna-section {
-    background-color: #fff;
+    background-color: var(--bg-light);
     padding: 100px 0;
     overflow: hidden;
 }
 
-/* Обгортка-контейнер (замість .container) */
+
 .sauna-wrapper {
-    max-width: 1200px; /* Стандартна ширина контейнера */
-    margin: 0 auto;    /* Центрування блоку */
-    padding: 0 15px;   /* Відступи по боках для мобільних */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
-/* --- Заголовок секції --- */
+
 .sauna-header {
     text-align: center;
     margin-bottom: 3rem;
@@ -470,37 +911,38 @@ h1, h2, h3 {
     width: 60px;
     height: 3px;
     background-color: var(--accent-color);
-    margin: 20px auto 0 auto; /* auto по боках центрує лінію */
+    margin: 20px auto 0 auto;
 }
 
-/* --- Основна сітка (Layout) --- */
+
 .sauna-layout {
     display: flex;
-    align-items: center; /* Центрування по вертикалі */
-    gap: 4rem;           /* Відступ між фото і текстом */
+    align-items: center;
+    gap: 4rem;
 }
 
-/* Колонка з фото */
+
 .sauna-media {
-    flex: 1.3; /* Займає трохи більше місця (як col-lg-7) */
+    flex: 1.3;
     display: flex;
-    justify-content: center; /* Центрує .sauna-image-box всередині колонки */
+    justify-content: center;
 }
 
-/* Колонка з текстом */
 .sauna-info {
-    flex: 1;   /* Займає решту місця (як col-lg-5) */
+    flex: 1;
 }
 
-/* --- Стилізація фото (Box) --- */
+
+
 .sauna-image-box {
     position: relative;
     z-index: 1;
     padding: 10px;
-    /* Центрування самого блоку */
     width: fit-content;
     max-width: 100%;
 }
+
+
 
 .sauna-image-box .main-img {
     display: block;
@@ -514,33 +956,36 @@ h1, h2, h3 {
     z-index: 2;
 }
 
+
+
 .sauna-image-box .img-backdrop {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    border: 2px solid var(--accent-color);
+    border: 2px solid var(--primary-color);
     border-radius: 8px;
     z-index: 1;
     opacity: 0.3;
-    /*transform: translate(-15px, -15px);*/
 
 }
 
-/* --- Текстовий контент --- */
+
 .sauna-desc {
     font-size: 1.15rem;
-    color: #6c757d; /* text-muted */
+    color: #6c757d;
     margin-bottom: 1.5rem;
     line-height: 1.6;
 }
 
 .sauna-quote {
-    background-color: #fcf8f3;
-    border-left: 4px solid var(--accent-color);
+
+    background-color: #f4f6f5;
+
+    border-left: 4px solid var(--primary-color);
     padding: 15px 20px;
-    border-radius: 0 5px 5px 0;
+    border-radius: 0 4px 4px 0;
     font-style: italic;
     color: #555;
     margin-bottom: 2rem;
@@ -554,10 +999,9 @@ h1, h2, h3 {
     margin-bottom: 1.5rem;
 }
 
-/* --- Сітка переваг (Grid замість .row) --- */
+
 .sauna-features-grid {
     display: grid;
-    /* Дві колонки однакової ширини */
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
     margin-bottom: 3rem;
@@ -572,21 +1016,25 @@ h1, h2, h3 {
     width: 40px;
     height: 40px;
     background-color: #fff;
-    border: 1px solid #eaddcf;
+
+    border: 1px solid rgba(27, 54, 41, 0.2);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-right: 12px;
-    color: var(--accent-color);
+
+    color: var(--primary-color);
     font-size: 1rem;
     flex-shrink: 0;
     transition: 0.3s;
 }
 
 .feature-item:hover .icon-circle {
-    background-color: var(--accent-color);
+
+    background-color: var(--primary-color);
     color: white;
+    border-color: var(--primary-color);
     transform: scale(1.1);
 }
 
@@ -595,39 +1043,39 @@ h1, h2, h3 {
     color: #333;
 }
 
-/* --- Кнопка --- */
+
 .sauna-actions {
-    /* Вирівнювання кнопки зліва (за замовчуванням) */
     text-align: left;
 }
 
 .btn-sauna {
-    display: inline-block; /* Щоб поводилась як кнопка, а не текст */
-    background-color: var(--accent-color);
+    display: inline-block;
+
+    background-color: var(--primary-color);
     color: #fff;
-    text-decoration: none; /* Прибираємо підкреслення */
+    text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 600;
     padding: 15px 40px;
-    border-radius: 4px;
+    border-radius: 0;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(197, 164, 126, 0.4);
+
+    box-shadow: 0 4px 15px rgba(27, 54, 41, 0.3);
 }
 
 .btn-sauna:hover {
-    background-color: #2E1300;
+
+    background-color: var(--accent-color);
     color: #fff;
     transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(46, 19, 0, 0.3);
+    box-shadow: 0 8px 20px rgba(197, 164, 126, 0.4);
 }
 
-/* =========================================
-   АДАПТИВНІСТЬ (Мобільні пристрої)
-   ========================================= */
+
 @media (max-width: 991px) {
     .sauna-layout {
-        flex-direction: column; /* Складаємо колонки одна під одну */
+        flex-direction: column;
         gap: 3rem;
     }
 
@@ -637,54 +1085,74 @@ h1, h2, h3 {
     }
 
     .sauna-features-grid {
-        grid-template-columns: 1fr; /* Одна колонка списку на телефонах */
+        grid-template-columns: 1fr;
     }
 
     .sauna-actions {
-        text-align: center; /* Центруємо кнопку на телефоні */
+        text-align: center;
     }
 
     .btn-sauna {
-        width: 100%; /* Кнопка на всю ширину */
+        width: 100%;
         text-align: center;
         box-sizing: border-box;
     }
 
     .sauna-image-box .img-backdrop {
-        display: none; /* Прибираємо декор на мобільному */
+        display: none;
     }
 }
+
 /* Footer */
 footer {
-    background-color: #1a1a1a;
-    color: #888;
-    padding: 50px 0 20px;
+
+    background-color: #0e1c15;
+    color: #a8b2ad;
+    padding: 60px 0 30px;
 }
 .footer-title {
     color: white;
     font-family: 'Playfair Display', serif;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 15px;
 }
+
+.footer-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 2px;
+    background-color: var(--accent-color);
+}
+
 .contact-link {
-    color: #fff;
+    color: #e0e0e0;
     text-decoration: none;
     display: block;
-    margin-bottom: 10px;
-    font-size: 1.1rem;
+    margin-bottom: 12px;
+    font-size: 1.05rem;
+    transition: 0.3s;
 }
 .contact-link:hover {
     color: var(--accent-color);
+    padding-left: 5px;
 }
 .social-icons a {
     color: white;
     margin-right: 15px;
     font-size: 1.2rem;
+    transition: 0.3s;
+}
+.social-icons a:hover {
+    color: var(--accent-color);
 }
 
 
-/* --- Стилі для сторінки детального опису номеру --- */
 
-/* Посилання "Назад" */
+
 .back-link {
     display: inline-block;
     color: #666;
@@ -694,33 +1162,36 @@ footer {
     transition: 0.3s;
 }
 .back-link:hover {
-    color: var(--accent-color);
+    color: var(--primary-color);
     transform: translateX(-5px);
 }
 
 /* Слайдер */
 .room-slider-img {
-    height: 500px; /* Фіксована висота слайдера */
-    object-fit: cover; /* Фото обрізається, але не розтягується */
+    height: 500px;
+    object-fit: cover;
 }
 
-/* Список зручностей (Grid) */
 .room-amenities-list {
     color: #555;
     font-size: 1rem;
 }
 .room-amenities-list i {
-    color: var(--accent-color);
-    width: 25px; /* Щоб текст рівнявся рівно */
+    color: var(--primary-color);
+    width: 25px;
     text-align: center;
 }
 
 /* Сайдбар бронювання */
 .booking-sidebar {
-    background-color: #fdfdfd;
+    background-color: #fff;
     border: 1px solid #eee;
-    position: sticky; /* Панель "прилипає" при прокрутці */
+    position: sticky;
     top: 100px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+
+    border-top: 3px solid var(--primary-color);
 }
 
 .booking-sidebar .current-price {
@@ -731,13 +1202,13 @@ footer {
     line-height: 1;
 }
 
-/* Адаптивність для мобільних */
+
 @media (max-width: 768px) {
     .room-slider-img {
-        height: 300px; /* Менша висота на телефонах */
+        height: 300px;
     }
     .booking-sidebar {
-        position: static; /* На мобільному сайдбар не липне */
+        position: static;
         margin-top: 30px;
     }
 }
