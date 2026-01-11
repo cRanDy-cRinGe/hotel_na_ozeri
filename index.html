@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="uk">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Новий комфортабельний готель НА ОЗЕРІ у Львові, тепло домашнього затишку, чудова сауна">
+    <meta name="description"
+        content="Новий комфортабельний готель НА ОЗЕРІ у Львові, тепло домашнього затишку, чудова сауна">
     <title>Готель-ресторан «НА ОЗЕРІ» | Львів</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
@@ -12,515 +14,600 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Montserrat:wght@400;600;700&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+
 <body>
 
-<nav class="navbar navbar-expand-lg fixed-top">
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Готель - НА ОЗЕРІ</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Головна</a></li>
+                    <li class="nav-item"><a class="nav-link" href="hotel.html">Готель</a></li>
+                    <li class="nav-item"><a class="nav-link" href="rooms.html">Номери</a></li>
+                    <li class="nav-item"><a class="nav-link" href="restaurant.html">Ресторан</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sauna.html">Сауна</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacts">Контакти</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a href="tel:+380673733133" class="btn btn-custom btn-sm">
+                            <i class="fas fa-phone-alt me-2"></i>+38 067 373 31 33
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero-section">
+        <div class="container">
+            <h1 class="hero-title">Готель-ресторан «НА ОЗЕРІ»</h1>
+            <p class="hero-subtitle">Новий комфортабельний готель у Львові. Тепло домашнього затишку та справжній
+                відпочинок.</p>
+            <a href="#rooms" class="hero-btn">Забронювати номер</a>
+        </div>
+    </section>
     <div class="container">
-        <a class="navbar-brand" href="#">Готель - НА ОЗЕРІ</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav align-items-center">
-                <li class="nav-item"><a class="nav-link" href="#home">Головна</a></li>
-                <li class="nav-item"><a class="nav-link" href="#about">Готель</a> <li class="nav-item"><a class="nav-link" href="#rooms">Номери</a></li>
-                <li class="nav-item"><a class="nav-link" href="#restaurant">Ресторан</a> <li class="nav-item"><a class="nav-link" href="#sauna">Сауна</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contacts">Контакти</a></li>
-                <li class="nav-item ms-lg-3">
-                    <a href="tel:+380673733133" class="btn btn-custom btn-sm">
-                        <i class="fas fa-phone-alt me-2"></i>+38 067 373 31 33
-                    </a>
-                </li>
-            </ul>
+        <div class="booking-bar">
+            <form action="http://naozeri.lviv.ua/booking_ua/index.php?mod=find" method="post">
+                <div class="row align-items-end g-3">
+
+                    <div class="col-md-3">
+                        <label class="form-label">Дата заїзду</label>
+                        <div class="input-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" class="input-icon">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                            </svg>
+                            <input type="date" class="form-control date-picker" name="FindForm1:arrivalDate"
+                                placeholder="Оберіть дату">
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label class="form-label">Дата виїзду</label>
+                        <div class="input-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" class="input-icon">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                            </svg>
+                            <input type="date" class="form-control date-picker" name="FindForm1:departureDate"
+                                placeholder="Оберіть дату">
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label class="form-label">Гостей</label>
+                        <div class="custom-select-wrapper">
+                            <i class="far fa-user input-icon"></i>
+                            <select class="form-select" name="guests">
+                                <option value="1">1 гість</option>
+                                <option value="2" selected>2 гостей</option>
+                                <option value="3">3 гостей</option>
+                                <option value="4">4 гостей</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <button type="submit" class="btn btn-custom w-100">Перевірити</button>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
-</nav>
 
-<section id="home" class="hero-section">
-    <div class="container">
-        <h1 class="hero-title">Готель-ресторан «НА ОЗЕРІ»</h1>
-        <p class="hero-subtitle">Новий комфортабельний готель у Львові. Тепло домашнього затишку та справжній відпочинок.</p>
-        <a href="#rooms" class="hero-btn">Забронювати номер</a>
-    </div>
-</section>
-<div class="container">
-    <div class="booking-bar">
-        <form action="http://naozeri.lviv.ua/booking_ua/index.php?mod=find" method="post">
-            <div class="row align-items-end g-3">
-
-                <div class="col-md-3">
-                    <label class="form-label">Дата заїзду</label>
-                    <div class="input-wrapper">
-                        <i class="far fa-calendar-alt input-icon"></i>
-                        <input type="date" class="form-control date-picker" name="FindForm1:arrivalDate" placeholder="Оберіть дату">
+    <<section id="about" class="section-padding about-section">
+        <div class="container">
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="about-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Готель На Озері" class="img-fluid rounded shadow-lg main-img">
+                        <div class="experience-badge">
+                            <span class="years">10+</span>
+                            <span class="text">років<br>досвіду</span>
+                        </div>
                     </div>
                 </div>
+                <div class="col-lg-6 ps-lg-5 about-text">
+                    <small class="section-subtitle">ПРО ГОТЕЛЬ</small>
+                    <h2 class="section-title mb-4">Більше ніж просто місце для ночівлі</h2>
 
-                <div class="col-md-3">
-                    <label class="form-label">Дата виїзду</label>
-                    <div class="input-wrapper">
-                        <i class="far fa-calendar-check input-icon"></i>
-                        <input type="date" class="form-control date-picker" name="FindForm1:departureDate" placeholder="Оберіть дату">
-                    </div>
-                </div>
+                    <p class="lead text-muted mb-4">Ми поєднали європейський комфорт із щирою українською гостинністю,
+                        щоб створити місце, куди хочеться повертатися.</p>
 
-                <div class="col-md-3">
-                    <label class="form-label">Гостей</label>
-                    <div class="custom-select-wrapper">
-                        <i class="far fa-user input-icon"></i>
-                        <select class="form-select" name="guests">
-                            <option value="1">1 гість</option>
-                            <option value="2" selected>2 гостей</option>
-                            <option value="3">3 гостей</option>
-                            <option value="4">4 гостей</option>
-                        </select>
-                    </div>
-                </div>
+                    <p>Ідея створення готелю-ресторану «НА ОЗЕРІ» народилася з бажання подарувати гостям затишок
+                        власного дому. Сьогодні це — сучасний комплекс з елегантними номерами, вишуканим рестораном та
+                        зоною відпочинку біля води.</p>
 
-                <div class="col-md-3">
-                    <button type="submit" class="btn btn-custom w-100">Перевірити</button>
-                </div>
-            </div>
-        </form>
-    </div>
-</div>
-
-<<section id="about" class="section-padding about-section">
-    <div class="container">
-        <div class="row align-items-center mb-5">
-            <div class="col-lg-6 mb-4 mb-lg-0">
-                <div class="about-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Готель На Озері" class="img-fluid rounded shadow-lg main-img">
-                    <div class="experience-badge">
-                        <span class="years">10+</span>
-                        <span class="text">років<br>досвіду</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 ps-lg-5 about-text">
-                <small class="section-subtitle">ПРО ГОТЕЛЬ</small>
-                <h2 class="section-title mb-4">Більше ніж просто місце для ночівлі</h2>
-
-                <p class="lead text-muted mb-4">Ми поєднали європейський комфорт із щирою українською гостинністю, щоб створити місце, куди хочеться повертатися.</p>
-
-                <p>Ідея створення готелю-ресторану «НА ОЗЕРІ» народилася з бажання подарувати гостям затишок власного дому. Сьогодні це — сучасний комплекс з елегантними номерами, вишуканим рестораном та зоною відпочинку біля води.</p>
-
-                <p>Чи ви подорожуєте у справах, чи шукаєте романтичного відпочинку — ми подбали про кожну деталь вашого перебування. Від м'яких рушників до ранкової кави — все пронизано турботою про вас.</p>
+                    <p>Чи ви подорожуєте у справах, чи шукаєте романтичного відпочинку — ми подбали про кожну деталь
+                        вашого перебування. Від м'яких рушників до ранкової кави — все пронизано турботою про вас.</p>
 
 
-            </div>
-        </div>
-
-        <div class="row mt-5 pt-4">
-            <div class="col-12 text-center mb-5">
-                <h3 class="section-title-sm">Чому обирають нас</h3>
-                <p class="text-muted mx-auto" style="max-width: 600px;">Ми постійно вдосконалюємось, щоб відповідати найвищим стандартам сервісу та комфорту.</p>
-            </div>
-
-            <div class="col-md-6 col-lg-3 mb-4">
-                <div class="feature-card text-center">
-                    <div class="icon-box mb-3">
-                        <i class="fas fa-map-marked-alt"></i>
-                    </div>
-                    <h4>Зручна локація</h4>
-                    <p class="text-muted small">Тихий район біля озера, але зі зручним доїздом до центру міста та вокзалу.</p>
                 </div>
             </div>
 
-            <div class="col-md-6 col-lg-3 mb-4">
-                <div class="feature-card text-center">
-                    <div class="icon-box mb-3">
-                        <i class="fas fa-concierge-bell"></i>
+            <div class="row mt-5 pt-4">
+                <div class="col-12 text-center mb-5">
+                    <h3 class="section-title-sm">Чому обирають нас</h3>
+                    <p class="text-muted mx-auto" style="max-width: 600px;">Ми постійно вдосконалюємось, щоб відповідати
+                        найвищим стандартам сервісу та комфорту.</p>
+                </div>
+
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="feature-card text-center">
+                        <div class="icon-box mb-3">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <h4>Зручна локація</h4>
+                        <p class="text-muted small">Тихий район біля озера, але зі зручним доїздом до центру міста та
+                            вокзалу.</p>
                     </div>
-                    <h4>Сервіс 24/7</h4>
-                    <p class="text-muted small">Наша рецепція працює цілодобово. Ми завжди готові допомогти вам з будь-яким питанням.</p>
                 </div>
-            </div>
 
-            <div class="col-md-6 col-lg-3 mb-4">
-                <div class="feature-card text-center">
-                    <div class="icon-box mb-3">
-                        <i class="fas fa-utensils"></i>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="feature-card text-center">
+                        <div class="icon-box mb-3">
+                            <i class="fas fa-concierge-bell"></i>
+                        </div>
+                        <h4>Сервіс 24/7</h4>
+                        <p class="text-muted small">Наша рецепція працює цілодобово. Ми завжди готові допомогти вам з
+                            будь-яким питанням.</p>
                     </div>
-                    <h4>Авторська кухня</h4>
-                    <p class="text-muted small">Ресторан з вишуканими стравами, де кожен сніданок стає маленьким святом.</p>
                 </div>
-            </div>
 
-            <div class="col-md-6 col-lg-3 mb-4">
-                <div class="feature-card text-center">
-                    <div class="icon-box mb-3">
-                        <i class="fas fa-wifi"></i>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="feature-card text-center">
+                        <div class="icon-box mb-3">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <h4>Авторська кухня</h4>
+                        <p class="text-muted small">Ресторан з вишуканими стравами, де кожен сніданок стає маленьким
+                            святом.</p>
                     </div>
-                    <h4>Smart-комфорт</h4>
-                    <p class="text-muted small">Швидкісний Wi-Fi на всій території, Smart TV у номерах та робочі зони.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<section id="rooms" class="section-padding rooms-section bg-light">
-    <div class="container">
-
-        <div class="row justify-content-center mb-5">
-            <div class="col-lg-10 text-center">
-                <small class="section-subtitle">АТМОСФЕРА</small>
-                <h2 class="section-title mb-4">Затишок європейської традиції</h2>
-
-                <div class="room-intro-text text-muted">
-                    <p>Маленькі, затишні і компактні родинні готельчики — давня європейська традиція гостинності. Головна відмінність маленького готелю — відчуття того, що, перебуваючи в іншому місті, ви зупинилися вдома чи у добрих друзів.</p>
-                    <p>У готелі «НА ОЗЕРІ» час пливе поволі і розмірено. У нас немає метушні великих готелів. Переступивши поріг будь-якої з наших кімнат, Ви мимоволі подумаєте: <em>„Нарешті я вдома"</em>.</p>
                 </div>
 
-                <div class="amenities-bar mt-4">
-                    <span class="amenity-item" title="Кондиціонер"><i class="fas fa-snowflake"></i> Кондиціонер</span>
-                    <span class="amenity-item" title="WI-FI"><i class="fas fa-wifi"></i> Wi-Fi</span>
-                    <span class="amenity-item" title="Міні-бар"><i class="fas fa-wine-glass-alt"></i> Міні-бар</span>
-                    <span class="amenity-item" title="Телебачення"><i class="fas fa-tv"></i> TV</span>
-                    <span class="amenity-item" title="Душова кімната"><i class="fas fa-shower"></i> Душ</span>
-                    <span class="amenity-item" title="Халати"><i class="fas fa-tshirt"></i> Халати</span>
-                    <span class="amenity-item" title="Фен"><i class="fas fa-wind"></i> Фен</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="row g-4"> <div class="col-lg-6">
-            <div class="room-card">
-                <div class="room-img-wrap">
-                    <span class="price-badge">1100 UAH</span>
-                    <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Номер Стандарт" class="img-fluid">
-                </div>
-                <div class="room-body">
-                    <div class="d-flex justify-content-between align-items-center mb-2">
-                        <h3 class="room-title">Стандарт Double</h3>
-                        <div class="room-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    </div>
-                    <p class="text-muted">Затишний номер з одним великим ліжком. Ідеально підходить для пари або ділової поїздки.</p>
-                    <div class="room-footer">
-                        <ul class="room-specs">
-                            <li><i class="fas fa-user"></i> 2 гостей</li>
-                            <li><i class="fas fa-vector-square"></i> 18 м²</li>
-                        </ul>
-                        <a href="room-details.html" class="btn btn-outline-custom">Детальніше</a>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="feature-card text-center">
+                        <div class="icon-box mb-3">
+                            <i class="fas fa-wifi"></i>
+                        </div>
+                        <h4>Smart-комфорт</h4>
+                        <p class="text-muted small">Швидкісний Wi-Fi на всій території, Smart TV у номерах та робочі
+                            зони.</p>
                     </div>
                 </div>
             </div>
         </div>
+        </section>
 
-            <div class="col-lg-6">
-                <div class="room-card">
-                    <div class="room-img-wrap">
-                        <span class="price-badge">1100 UAH</span>
-                        <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Номер Твін" class="img-fluid">
-                    </div>
-                    <div class="room-body">
-                        <div class="d-flex justify-content-between align-items-center mb-2">
-                            <h3 class="room-title">Стандарт Twin</h3>
-                            <div class="room-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                        </div>
-                        <p class="text-muted">Класичний номер з двома роздільними ліжками. Домашній затишок та кольорові сни гарантовано.</p>
-                        <div class="room-footer">
-                            <ul class="room-specs">
-                                <li><i class="fas fa-user"></i> 2 гостей</li>
-                                <li><i class="fas fa-vector-square"></i> 20 м²</li>
-                            </ul>
-                            <a href="room-details.html" class="btn btn-outline-custom">Детальніше</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <div class="col-lg-6">
-                <div class="room-card">
-                    <div class="room-img-wrap">
-                        <span class="price-badge">1200 UAH</span>
-                        <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Номер Комфорт" class="img-fluid">
-                    </div>
-                    <div class="room-body">
-                        <div class="d-flex justify-content-between align-items-center mb-2">
-                            <h3 class="room-title">Комфорт Classic</h3>
-                            <div class="room-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <section id="rooms" class="section-padding rooms-section bg-light">
+            <div class="container">
+
+                <div class="row justify-content-center mb-5">
+                    <div class="col-lg-10 text-center">
+                        <small class="section-subtitle">АТМОСФЕРА</small>
+                        <h2 class="section-title mb-4">Затишок європейської традиції</h2>
+
+                        <div class="room-intro-text text-muted">
+                            <p>Маленькі, затишні і компактні родинні готельчики — давня європейська традиція
+                                гостинності. Головна відмінність маленького готелю — відчуття того, що, перебуваючи в
+                                іншому місті, ви зупинилися вдома чи у добрих друзів.</p>
+                            <p>У готелі «НА ОЗЕРІ» час пливе поволі і розмірено. У нас немає метушні великих готелів.
+                                Переступивши поріг будь-якої з наших кімнат, Ви мимоволі подумаєте: <em>„Нарешті я
+                                    вдома"</em>.</p>
                         </div>
-                        <p class="text-muted">Просторий номер покращеного планування. Збільшена площа та робоча зона.</p>
-                        <div class="room-footer">
-                            <ul class="room-specs">
-                                <li><i class="fas fa-user"></i> 2 гостей</li>
-                                <li><i class="fas fa-vector-square"></i> 25 м²</li>
-                            </ul>
-                            <a href="room-details.html" class="btn btn-outline-custom">Детальніше</a>
+
+                        <div class="amenities-bar mt-4">
+                            <span class="amenity-item" title="Кондиціонер"><i class="fas fa-snowflake"></i>
+                                Кондиціонер</span>
+                            <span class="amenity-item" title="WI-FI"><i class="fas fa-wifi"></i> Wi-Fi</span>
+                            <span class="amenity-item" title="Міні-бар"><i class="fas fa-wine-glass-alt"></i>
+                                Міні-бар</span>
+                            <span class="amenity-item" title="Телебачення"><i class="fas fa-tv"></i> TV</span>
+                            <span class="amenity-item" title="Душова кімната"><i class="fas fa-shower"></i> Душ</span>
+                            <span class="amenity-item" title="Халати"><i class="fas fa-tshirt"></i> Халати</span>
+                            <span class="amenity-item" title="Фен"><i class="fas fa-wind"></i> Фен</span>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="col-lg-6">
-                <div class="room-card">
-                    <div class="room-img-wrap">
-                        <span class="price-badge">1200 UAH</span>
-                        <img src="https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Номер Напівлюкс" class="img-fluid">
-                    </div>
-                    <div class="room-body">
-                        <div class="d-flex justify-content-between align-items-center mb-2">
-                            <h3 class="room-title">Напівлюкс</h3>
-                            <div class="room-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                        </div>
-                        <p class="text-muted">Елегантний номер з балконом та чудовим видом. Ідеальний вибір для тривалого проживання.</p>
-                        <div class="room-footer">
-                            <ul class="room-specs">
-                                <li><i class="fas fa-user"></i> 2+1 гостей</li>
-                                <li><i class="fas fa-vector-square"></i> 28 м²</li>
-                            </ul>
-                            <a href="room-details.html" class="btn btn-outline-custom">Детальніше</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-6">
-                <div class="room-card">
-                    <div class="room-img-wrap">
-                        <span class="price-badge">1400 UAH</span>
-                        <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Люкс" class="img-fluid">
-                    </div>
-                    <div class="room-body">
-                        <div class="d-flex justify-content-between align-items-center mb-2">
-                            <h3 class="room-title">Люкс "Прем'єр"</h3>
-                            <div class="room-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                        </div>
-                        <p class="text-muted">Двокімнатний номер вищої категорії. Максимальний простір та казковий шарм інтер'єру.</p>
-                        <div class="room-footer">
-                            <ul class="room-specs">
-                                <li><i class="fas fa-user"></i> 2-4 гостей</li>
-                                <li><i class="fas fa-vector-square"></i> 40 м²</li>
-                            </ul>
-                            <a href="room-details.html" class="btn btn-outline-custom">Детальніше</a>
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <div class="room-card">
+                            <div class="room-img-wrap">
+                                <span class="price-badge">1100 UAH</span>
+                                <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                    alt="Номер Стандарт" class="img-fluid">
+                            </div>
+                            <div class="room-body">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <h3 class="room-title">Стандарт Double</h3>
+                                    <div class="room-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i></div>
+                                </div>
+                                <p class="text-muted">Затишний номер з одним великим ліжком. Ідеально підходить для пари
+                                    або ділової поїздки.</p>
+                                <div class="room-footer">
+                                    <ul class="room-specs">
+                                        <li><i class="fas fa-user"></i> 2 гостей</li>
+                                        <li><i class="fas fa-vector-square"></i> 18 м²</li>
+                                    </ul>
+                                    <a href="room-details.html" class="btn btn-outline-custom">Детальніше</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
 
-            <div class="col-lg-6">
-                <div class="room-card">
-                    <div class="room-img-wrap">
-                        <span class="price-badge">1400 UAH</span>
-                        <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Сімейний люкс" class="img-fluid">
-                    </div>
-                    <div class="room-body">
-                        <div class="d-flex justify-content-between align-items-center mb-2">
-                            <h3 class="room-title">Сімейний Люкс</h3>
-                            <div class="room-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                        </div>
-                        <p class="text-muted">Створений для комфортного відпочинку всією родиною. Велика ванна кімната та зона вітальні.</p>
-                        <div class="room-footer">
-                            <ul class="room-specs">
-                                <li><i class="fas fa-user"></i> 4 гостей</li>
-                                <li><i class="fas fa-vector-square"></i> 45 м²</li>
-                            </ul>
-                            <a href="room-details.html" class="btn btn-outline-custom">Детальніше</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-6">
-                <div class="room-card">
-                    <div class="room-img-wrap">
-                        <span class="price-badge">1100 UAH</span>
-                        <img src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Мансардний номер" class="img-fluid">
-                    </div>
-                    <div class="room-body">
-                        <div class="d-flex justify-content-between align-items-center mb-2">
-                            <h3 class="room-title">Мансардний затишок</h3>
-                            <div class="room-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                        </div>
-                        <p class="text-muted">Особлива атмосфера мансардного поверху. Тиша, спокій та вікна в небо.</p>
-                        <div class="room-footer">
-                            <ul class="room-specs">
-                                <li><i class="fas fa-user"></i> 2 гостей</li>
-                                <li><i class="fas fa-vector-square"></i> 18 м²</li>
-                            </ul>
-                            <a href="room-details.html" class="btn btn-outline-custom">Детальніше</a>
+                    <div class="col-lg-6">
+                        <div class="room-card">
+                            <div class="room-img-wrap">
+                                <span class="price-badge">1100 UAH</span>
+                                <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                    alt="Номер Твін" class="img-fluid">
+                            </div>
+                            <div class="room-body">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <h3 class="room-title">Стандарт Twin</h3>
+                                    <div class="room-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i></div>
+                                </div>
+                                <p class="text-muted">Класичний номер з двома роздільними ліжками. Домашній затишок та
+                                    кольорові сни гарантовано.</p>
+                                <div class="room-footer">
+                                    <ul class="room-specs">
+                                        <li><i class="fas fa-user"></i> 2 гостей</li>
+                                        <li><i class="fas fa-vector-square"></i> 20 м²</li>
+                                    </ul>
+                                    <a href="room-details.html" class="btn btn-outline-custom">Детальніше</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
 
-            <div class="col-lg-6">
-                <div class="room-card">
-                    <div class="room-img-wrap">
-                        <span class="price-badge">1200 UAH</span>
-                        <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Бізнес номер" class="img-fluid">
-                    </div>
-                    <div class="room-body">
-                        <div class="d-flex justify-content-between align-items-center mb-2">
-                            <h3 class="room-title">Бізнес Комфорт</h3>
-                            <div class="room-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <div class="col-lg-6">
+                        <div class="room-card">
+                            <div class="room-img-wrap">
+                                <span class="price-badge">1200 UAH</span>
+                                <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                    alt="Номер Комфорт" class="img-fluid">
+                            </div>
+                            <div class="room-body">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <h3 class="room-title">Комфорт Classic</h3>
+                                    <div class="room-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                                </div>
+                                <p class="text-muted">Просторий номер покращеного планування. Збільшена площа та робоча
+                                    зона.</p>
+                                <div class="room-footer">
+                                    <ul class="room-specs">
+                                        <li><i class="fas fa-user"></i> 2 гостей</li>
+                                        <li><i class="fas fa-vector-square"></i> 25 м²</li>
+                                    </ul>
+                                    <a href="room-details.html" class="btn btn-outline-custom">Детальніше</a>
+                                </div>
+                            </div>
                         </div>
-                        <p class="text-muted">Для тих, хто цінує функціональність. Зручне робоче місце та стабільний інтернет.</p>
-                        <div class="room-footer">
-                            <ul class="room-specs">
-                                <li><i class="fas fa-user"></i> 1-2 гостей</li>
-                                <li><i class="fas fa-vector-square"></i> 22 м²</li>
-                            </ul>
-                            <a href="room-details.html" class="btn btn-outline-custom">Детальніше</a>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="room-card">
+                            <div class="room-img-wrap">
+                                <span class="price-badge">1200 UAH</span>
+                                <img src="https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                    alt="Номер Напівлюкс" class="img-fluid">
+                            </div>
+                            <div class="room-body">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <h3 class="room-title">Напівлюкс</h3>
+                                    <div class="room-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                                </div>
+                                <p class="text-muted">Елегантний номер з балконом та чудовим видом. Ідеальний вибір для
+                                    тривалого проживання.</p>
+                                <div class="room-footer">
+                                    <ul class="room-specs">
+                                        <li><i class="fas fa-user"></i> 2+1 гостей</li>
+                                        <li><i class="fas fa-vector-square"></i> 28 м²</li>
+                                    </ul>
+                                    <a href="room-details.html" class="btn btn-outline-custom">Детальніше</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="room-card">
+                            <div class="room-img-wrap">
+                                <span class="price-badge">1400 UAH</span>
+                                <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                    alt="Люкс" class="img-fluid">
+                            </div>
+                            <div class="room-body">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <h3 class="room-title">Люкс "Прем'єр"</h3>
+                                    <div class="room-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i></div>
+                                </div>
+                                <p class="text-muted">Двокімнатний номер вищої категорії. Максимальний простір та
+                                    казковий шарм інтер'єру.</p>
+                                <div class="room-footer">
+                                    <ul class="room-specs">
+                                        <li><i class="fas fa-user"></i> 2-4 гостей</li>
+                                        <li><i class="fas fa-vector-square"></i> 40 м²</li>
+                                    </ul>
+                                    <a href="room-details.html" class="btn btn-outline-custom">Детальніше</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="room-card">
+                            <div class="room-img-wrap">
+                                <span class="price-badge">1400 UAH</span>
+                                <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                    alt="Сімейний люкс" class="img-fluid">
+                            </div>
+                            <div class="room-body">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <h3 class="room-title">Сімейний Люкс</h3>
+                                    <div class="room-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i></div>
+                                </div>
+                                <p class="text-muted">Створений для комфортного відпочинку всією родиною. Велика ванна
+                                    кімната та зона вітальні.</p>
+                                <div class="room-footer">
+                                    <ul class="room-specs">
+                                        <li><i class="fas fa-user"></i> 4 гостей</li>
+                                        <li><i class="fas fa-vector-square"></i> 45 м²</li>
+                                    </ul>
+                                    <a href="room-details.html" class="btn btn-outline-custom">Детальніше</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="room-card">
+                            <div class="room-img-wrap">
+                                <span class="price-badge">1100 UAH</span>
+                                <img src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                    alt="Мансардний номер" class="img-fluid">
+                            </div>
+                            <div class="room-body">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <h3 class="room-title">Мансардний затишок</h3>
+                                    <div class="room-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i></div>
+                                </div>
+                                <p class="text-muted">Особлива атмосфера мансардного поверху. Тиша, спокій та вікна в
+                                    небо.</p>
+                                <div class="room-footer">
+                                    <ul class="room-specs">
+                                        <li><i class="fas fa-user"></i> 2 гостей</li>
+                                        <li><i class="fas fa-vector-square"></i> 18 м²</li>
+                                    </ul>
+                                    <a href="room-details.html" class="btn btn-outline-custom">Детальніше</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="room-card">
+                            <div class="room-img-wrap">
+                                <span class="price-badge">1200 UAH</span>
+                                <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                    alt="Бізнес номер" class="img-fluid">
+                            </div>
+                            <div class="room-body">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <h3 class="room-title">Бізнес Комфорт</h3>
+                                    <div class="room-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                                </div>
+                                <p class="text-muted">Для тих, хто цінує функціональність. Зручне робоче місце та
+                                    стабільний інтернет.</p>
+                                <div class="room-footer">
+                                    <ul class="room-specs">
+                                        <li><i class="fas fa-user"></i> 1-2 гостей</li>
+                                        <li><i class="fas fa-vector-square"></i> 22 м²</li>
+                                    </ul>
+                                    <a href="room-details.html" class="btn btn-outline-custom">Детальніше</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section id="restaurant" class="section-padding bg-white">
+            <div class="container">
+                <div class="row align-items-center">
+
+                    <div class="col-lg-6 mb-5 mb-lg-0 order-lg-2">
+                        <small class="section-subtitle">СМАК ДОМАШНЬОЇ КУХНІ</small>
+                        <h2 class="section-title mb-4">Ресторан «НА ОЗЕРІ»</h2>
+
+                        <div class="restaurant-text text-muted">
+                            <p>Деякі люди у ресторани не ходять принципово - кажуть, що їм смакує лишень їжа, дбайливо
+                                приготована вдома лагідними руками мами чи коханої дружини. І такі безкомпромісні
+                                шанувальники здорової домашньої кухні були у ресторані «НА ОЗЕРІ».</p>
+
+                            <p>Вони пробували наші страви, і тепер вони наші завсідники — наша домашня кухня їх приємно
+                                здивувала і, як вони кажуть: <em>„полонила їхні серця"</em>. А скільки жінок проклали
+                                шлях до серця свого обранця через вечері у нашому ресторані...</p>
+
+                            <p>Загалом у нас <strong>чотири банкетні зали</strong>: на 120, 30, 20 і 15 чоловік, а також
+                                відкриті або засклені альтанки. Це зручно як для бізнес-ланчів, так і для святкових
+                                банкетів: весіль, ювілеїв, корпоративів.</p>
+
+                            <p>Особливо рекомендуємо скуштувати шашлик чи рибу на вугіллі. А секрет простий — до кожної
+                                страви ми додаємо дрібочку сердечної любові та поваги до своїх гостей. І тому у
+                                ресторані «НА ОЗЕРІ» навіть скибочка хліба неймовірно смачна.</p>
+                        </div>
+
+                        <div class="restaurant-cta mt-4 p-4 bg-light border-start border-4 border-success">
+                            <h5 class="mb-3 text-dark">Замовлення столиків та страв:</h5>
+                            <a href="tel:+380673733133" class="phone-link-minimal">
+                                <i class="fas fa-phone-alt"></i> +38 067 373 31 33
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 order-lg-1 pe-lg-5">
+                        <div class="row g-3">
+                            <div class="col-6">
+                                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                    alt="Інтер'єр ресторану" class="img-fluid rounded shadow-lg w-100 object-fit-cover"
+                                    style="height: 400px;">
+                            </div>
+                            <div class="col-6 mt-5">
+                                <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                    alt="Смачні страви" class="img-fluid rounded shadow-lg w-100 object-fit-cover"
+                                    style="height: 400px;">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="sauna" class="sauna-section">
+            <div class="sauna-wrapper">
+
+                <div class="sauna-header">
+                    <small class="section-subtitle">ВІДНОВЛЕННЯ СИЛ</small>
+                    <h2 class="section-title">Сауна — душа готелю «НА ОЗЕРІ»</h2>
+                    <div class="title-separator"></div>
+                </div>
+
+                <div class="sauna-layout">
+
+                    <div class="sauna-media">
+                        <div class="sauna-image-box">
+                            <img src="static/OIP.webp" alt="Інтер'єр дерев'яної сауни" class="main-img">
+                            <div class="img-backdrop"></div>
+                        </div>
+                    </div>
+
+                    <div class="sauna-info">
+                        <p class="sauna-desc">
+                            Без сауни просто неможливо уявити наш готель. Це саме та родзинка, яка додає рідкісного
+                            задоволення усьому відпочинку.
+                        </p>
+
+                        <div class="sauna-quote">
+                            <p>«Провівши два дні вихідних у нас, попередньо вимкнувши телефон, у вас складеться
+                                враження, що ви відпочивали <strong>тиждень десь за кордоном</strong>».</p>
+                        </div>
+
+                        <h4 class="sauna-list-title">У вашому розпорядженні:</h4>
+
+                        <div class="sauna-features-grid">
+                            <div class="feature-item">
+                                <div class="icon-circle"><i class="fas fa-swimming-pool"></i></div>
+                                <span>Басейн з течією</span>
+                            </div>
+                            <div class="feature-item">
+                                <div class="icon-circle"><i class="fas fa-water"></i></div>
+                                <span>Гідромасаж</span>
+                            </div>
+                            <div class="feature-item">
+                                <div class="icon-circle"><i class="fas fa-temperature-high"></i></div>
+                                <span>Фінська сауна</span>
+                            </div>
+                            <div class="feature-item">
+                                <div class="icon-circle"><i class="fas fa-mug-hot"></i></div>
+                                <span>Чай та посуд</span>
+                            </div>
+                            <div class="feature-item">
+                                <div class="icon-circle"><i class="fas fa-spa"></i></div>
+                                <span>Кімната відпочинку</span>
+                            </div>
+                            <div class="feature-item">
+                                <div class="icon-circle"><i class="fas fa-check-circle"></i></div>
+                                <span>Повний релакс</span>
+                            </div>
+                        </div>
+
+                        <div class="sauna-actions">
+                            <a href="#contacts" class="btn-sauna">Замовити сауну</a>
                         </div>
                     </div>
                 </div>
             </div>
+        </section>
 
-        </div>
-    </div>
-</section>
-
-
-<section id="restaurant" class="section-padding bg-white">
-    <div class="container">
-        <div class="row align-items-center">
-
-            <div class="col-lg-6 mb-5 mb-lg-0 order-lg-2">
-                <small class="section-subtitle">СМАК ДОМАШНЬОЇ КУХНІ</small>
-                <h2 class="section-title mb-4">Ресторан «НА ОЗЕРІ»</h2>
-
-                <div class="restaurant-text text-muted">
-                    <p>Деякі люди у ресторани не ходять принципово - кажуть, що їм смакує лишень їжа, дбайливо приготована вдома лагідними руками мами чи коханої дружини. І такі безкомпромісні шанувальники здорової домашньої кухні були у ресторані «НА ОЗЕРІ».</p>
-
-                    <p>Вони пробували наші страви, і тепер вони наші завсідники — наша домашня кухня їх приємно здивувала і, як вони кажуть: <em>„полонила їхні серця"</em>. А скільки жінок проклали шлях до серця свого обранця через вечері у нашому ресторані...</p>
-
-                    <p>Загалом у нас <strong>чотири банкетні зали</strong>: на 120, 30, 20 і 15 чоловік, а також відкриті або засклені альтанки. Це зручно як для бізнес-ланчів, так і для святкових банкетів: весіль, ювілеїв, корпоративів.</p>
-
-                    <p>Особливо рекомендуємо скуштувати шашлик чи рибу на вугіллі. А секрет простий — до кожної страви ми додаємо дрібочку сердечної любові та поваги до своїх гостей. І тому у ресторані «НА ОЗЕРІ» навіть скибочка хліба неймовірно смачна.</p>
-                </div>
-
-                <div class="restaurant-cta mt-4 p-4 bg-light border-start border-4 border-success">
-                    <h5 class="mb-3 text-dark">Замовлення столиків та страв:</h5>
-                    <a href="tel:+380673733133" class="btn btn-custom">
-                        <i class="fas fa-utensils me-2"></i> +38 067 373 31 33
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-lg-6 order-lg-1 pe-lg-5">
-                <div class="row g-3">
-                    <div class="col-6">
-                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Інтер'єр ресторану" class="img-fluid rounded shadow-lg w-100 object-fit-cover" style="height: 400px;">
+        <footer id="contacts">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <h4 class="footer-title">НА ОЗЕРІ</h4>
+                        <p>Готель-ресторан у Львові, де ви знайдете тепло домашнього затишку.</p>
+                        <div class="social-icons mt-3">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-google-plus"></i></a>
+                        </div>
                     </div>
-                    <div class="col-6 mt-5">
-                        <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Смачні страви" class="img-fluid rounded shadow-lg w-100 object-fit-cover" style="height: 400px;">
+                    <div class="col-md-4 mb-4">
+                        <h4 class="footer-title">Контакти</h4>
+                        <a href="tel:+380673733133" class="contact-link"><i class="fas fa-mobile-alt me-2"></i> +38 067
+                            373 31 33</a>
+                        <a href="tel:+380322970353" class="contact-link"><i class="fas fa-phone me-2"></i> +38 (032)
+                            297-03-53</a>
+                        <a href="tel:+380973443322" class="contact-link"><i class="fab fa-viber me-2"></i> +38 097 344
+                            33 22 (Viber)</a>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <h4 class="footer-title">Адреса</h4>
+                        <p>Україна, м. Львів</p>
+                        <p class="text-muted small">Ми знаходимось у затишному куточку міста біля озера.</p>
+                    </div>
+                </div>
+                <hr style="border-color: #444;">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <p class="small mb-0">Copyright © 2025 Готель-ресторан «НА ОЗЕРІ». Всі права захищено.</p>
                     </div>
                 </div>
             </div>
+        </footer>
 
-        </div>
-    </div>
-</section>
-
-<section id="sauna" class="sauna-section">
-    <div class="sauna-wrapper">
-
-        <div class="sauna-header">
-            <small class="section-subtitle">ВІДНОВЛЕННЯ СИЛ</small>
-            <h2 class="section-title">Сауна — душа готелю «НА ОЗЕРІ»</h2>
-            <div class="title-separator"></div>
-        </div>
-
-        <div class="sauna-layout">
-
-            <div class="sauna-media">
-                <div class="sauna-image-box">
-                    <img src="static/OIP.webp" alt="Інтер'єр дерев'яної сауни" class="main-img">
-                    <div class="img-backdrop"></div>
-                </div>
-            </div>
-
-            <div class="sauna-info">
-                <p class="sauna-desc">
-                    Без сауни просто неможливо уявити наш готель. Це саме та родзинка, яка додає рідкісного задоволення усьому відпочинку.
-                </p>
-
-                <div class="sauna-quote">
-                    <p>«Провівши два дні вихідних у нас, попередньо вимкнувши телефон, у вас складеться враження, що ви відпочивали <strong>тиждень десь за кордоном</strong>».</p>
-                </div>
-
-                <h4 class="sauna-list-title">У вашому розпорядженні:</h4>
-
-                <div class="sauna-features-grid">
-                    <div class="feature-item">
-                        <div class="icon-circle"><i class="fas fa-swimming-pool"></i></div>
-                        <span>Басейн з течією</span>
-                    </div>
-                    <div class="feature-item">
-                        <div class="icon-circle"><i class="fas fa-water"></i></div>
-                        <span>Гідромасаж</span>
-                    </div>
-                    <div class="feature-item">
-                        <div class="icon-circle"><i class="fas fa-temperature-high"></i></div>
-                        <span>Фінська сауна</span>
-                    </div>
-                    <div class="feature-item">
-                        <div class="icon-circle"><i class="fas fa-mug-hot"></i></div>
-                        <span>Чай та посуд</span>
-                    </div>
-                    <div class="feature-item">
-                        <div class="icon-circle"><i class="fas fa-spa"></i></div>
-                        <span>Кімната відпочинку</span>
-                    </div>
-                    <div class="feature-item">
-                        <div class="icon-circle"><i class="fas fa-check-circle"></i></div>
-                        <span>Повний релакс</span>
-                    </div>
-                </div>
-
-                <div class="sauna-actions">
-                    <a href="#contacts" class="btn-sauna">Замовити сауну</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<footer id="contacts">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 mb-4">
-                <h4 class="footer-title">НА ОЗЕРІ</h4>
-                <p>Готель-ресторан у Львові, де ви знайдете тепло домашнього затишку.</p>
-                <div class="social-icons mt-3">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-google-plus"></i></a>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <h4 class="footer-title">Контакти</h4>
-                <a href="tel:+380673733133" class="contact-link"><i class="fas fa-mobile-alt me-2"></i> +38 067 373 31 33</a>
-                <a href="tel:+380322970353" class="contact-link"><i class="fas fa-phone me-2"></i> +38 (032) 297-03-53</a>
-                <a href="tel:+380973443322" class="contact-link"><i class="fab fa-viber me-2"></i> +38 097 344 33 22 (Viber)</a>
-            </div>
-            <div class="col-md-4 mb-4">
-                <h4 class="footer-title">Адреса</h4>
-                <p>Україна, м. Львів</p>
-                <p class="text-muted small">Ми знаходимось у затишному куточку міста біля озера.</p>
-            </div>
-        </div>
-        <hr style="border-color: #444;">
-        <div class="row">
-            <div class="col-12 text-center">
-                <p class="small mb-0">Copyright © 2025 Готель-ресторан «НА ОЗЕРІ». Всі права захищено.</p>
-            </div>
-        </div>
-    </div>
-</footer>
-
-<script src="js/script.js"> </script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/script.js"> </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
