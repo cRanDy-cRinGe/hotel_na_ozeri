@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ресторан в готелі НА ОЗЕРІ у Львові">
+    <title>Ресторан - Готель «НА ОЗЕРІ»</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/l10n/uk.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Montserrat:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Готель - НА ОЗЕРІ</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Головна</a></li>
+                    <li class="nav-item"><a class="nav-link" href="hotel.html">Готель</a></li>
+                    <li class="nav-item"><a class="nav-link" href="rooms.html">Номери</a></li>
+                    <li class="nav-item"><a class="nav-link" href="restaurant.html">Ресторан</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sauna.html">Сауна</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacts">Контакти</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a href="tel:+380673733133" class="btn btn-custom btn-sm">
+                            <i class="fas fa-phone-alt me-2"></i>+38 067 373 31 33
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Spacer for fixed navbar -->
+    <div style="height: 100px;"></div>
+
+    <section id="restaurant" class="section-padding bg-white">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <div class="col-lg-6 mb-5 mb-lg-0 order-lg-2">
+                    <small class="section-subtitle">СМАК ДОМАШНЬОЇ КУХНІ</small>
+                    <h2 class="section-title mb-4">Ресторан «НА ОЗЕРІ»</h2>
+
+                    <div class="restaurant-text text-muted">
+                        <p>Деякі люди у ресторани не ходять принципово - кажуть, що їм смакує лишень їжа, дбайливо
+                            приготована вдома лагідними руками мами чи коханої дружини. І такі безкомпромісні
+                            шанувальники здорової домашньої кухні були у ресторані «НА ОЗЕРІ».</p>
+
+                        <p>Вони пробували наші страви, і тепер вони наші завсідники — наша домашня кухня їх приємно
+                            здивувала і, як вони кажуть: <em>„полонила їхні серця"</em>. А скільки жінок проклали шлях
+                            до серця свого обранця через вечері у нашому ресторані...</p>
+
+                        <p>Загалом у нас <strong>чотири банкетні зали</strong>: на 120, 30, 20 і 15 чоловік, а також
+                            відкриті або засклені альтанки. Це зручно як для бізнес-ланчів, так і для святкових
+                            банкетів: весіль, ювілеїв, корпоративів.</p>
+
+                        <p>Особливо рекомендуємо скуштувати шашлик чи рибу на вугіллі. А секрет простий — до кожної
+                            страви ми додаємо дрібочку сердечної любові та поваги до своїх гостей. І тому у ресторані
+                            «НА ОЗЕРІ» навіть скибочка хліба неймовірно смачна.</p>
+                    </div>
+
+                    <div class="restaurant-cta mt-4 p-4 bg-light border-start border-4 border-success">
+                        <h5 class="mb-3 text-dark">Замовлення столиків та страв:</h5>
+                        <a href="tel:+380673733133" class="phone-link-minimal">
+                            <i class="fas fa-phone-alt"></i> +38 067 373 31 33
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 order-lg-1 pe-lg-5">
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                alt="Інтер'єр ресторану" class="img-fluid rounded shadow-lg w-100 object-fit-cover"
+                                style="height: 400px;">
+                        </div>
+                        <div class="col-6 mt-5">
+                            <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                alt="Смачні страви" class="img-fluid rounded shadow-lg w-100 object-fit-cover"
+                                style="height: 400px;">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Atmosphere Section -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 ps-lg-5 about-text">
+                    <small class="section-subtitle">АТМОСФЕРА</small>
+                    <h2 class="section-title mb-4">Більше ніж просто їжа</h2>
+                    <p class="lead text-muted mb-4">Ми віримо, що смак страви починається з настрою, з яким її
+                        готують, і атмосфери, в якій її куштують.</p>
+                    <p>Наш шеф-кухар особисто відбирає найсвіжіші продукти у місцевих фермерів, щоб кожен інгредієнт
+                        на вашій тарілці був бездоганним. Ми поєднуємо класичні українські рецепти з сучасними
+                        гастрономічними трендами, створюючи страви, які дивують і водночас дарують відчуття дому.</p>
+                    <p>Вечорами у нас звучить жива музика, а світло приглушується, створюючи ідеальну обстановку для
+                        романтичних побачень та душевних розмов. Влітку працює відкрита тераса з видом на озеро, де
+                        особливо смакують наші фірмові лимонади та страви на грилі.</p>
+                </div>
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="row g-2">
+                        <div class="col-6">
+                            <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                alt="Атмосфера залу" class="img-fluid rounded shadow-sm mb-2">
+                            <img src="https://images.unsplash.com/photo-1544148103-0773bf10d330?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                alt="Деталі сервірування" class="img-fluid rounded shadow-sm">
+                        </div>
+                        <div class="col-6 mt-4">
+                            <img src="https://images.unsplash.com/photo-1544148103-0773bf10d330?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                alt="Вишукані страви" class="img-fluid rounded shadow-sm mb-2">
+                            <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                alt="Коктейлі" class="img-fluid rounded shadow-sm">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="section-padding bg-white menu-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <small class="section-subtitle">НАШЕ МЕНЮ</small>
+                <h2 class="section-title">Вишукані смаки</h2>
+                <p class="text-muted mx-auto" style="max-width: 600px;">Авторські страви, приготовані з любов'ю та
+                    натхненням.</p>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <!-- Menu Categories Tabs -->
+                    <ul class="nav nav-pills justify-content-center mb-5" id="menu-tabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active rounded-pill px-4 py-2 mx-1" id="starters-tab"
+                                data-bs-toggle="pill" data-bs-target="#starters" type="button" role="tab">Холодні
+                                закуски</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link rounded-pill px-4 py-2 mx-1" id="salads-tab" data-bs-toggle="pill"
+                                data-bs-target="#salads" type="button" role="tab">Салати</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link rounded-pill px-4 py-2 mx-1" id="main-tab" data-bs-toggle="pill"
+                                data-bs-target="#main" type="button" role="tab">Гарячі страви</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link rounded-pill px-4 py-2 mx-1" id="grill-tab" data-bs-toggle="pill"
+                                data-bs-target="#grill" type="button" role="tab">Гриль меню</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link rounded-pill px-4 py-2 mx-1" id="desserts-tab" data-bs-toggle="pill"
+                                data-bs-target="#desserts" type="button" role="tab">Десерти</button>
+                        </li>
+                    </ul>
+
+                    <!-- Menu Content -->
+                    <div class="tab-content" id="menu-tabContent">
+                        <!-- Starters -->
+                        <div class="tab-pane fade show active" id="starters" role="tabpanel">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="menu-item d-flex justify-content-between align-items-start mb-4">
+                                        <div class="me-3">
+                                            <h5 class="mb-1">М'ясне плато</h5>
+                                            <p class="text-muted small mb-0">Асорті домашніх ковбас, буженина, філе
+                                                курки, підчеревина</p>
+                                        </div>
+                                        <div class="text-end">
+                                            <span class="price-tag d-block">350 ₴</span>
+                                            <small class="text-muted">300г</small>
+                                        </div>
+                                    </div>
+                                    <div class="menu-item d-flex justify-content-between align-items-start mb-4">
+                                        <div class="me-3">
+                                            <h5 class="mb-1">Сирне плато</h5>
+                                            <p class="text-muted small mb-0">Пармезан, дор блю, камамбер, фета, мед,
+                                                горіхи</p>
+                                        </div>
+                                        <div class="text-end">
+                                            <span class="price-tag d-block">280 ₴</span>
+                                            <small class="text-muted">250г</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="menu-item d-flex justify-content-between align-items-start mb-4">
+                                        <div class="me-3">
+                                            <h5 class="mb-1">Карпаччо з лосося</h5>
+                                            <p class="text-muted small mb-0">Свіжий лосось, рукола, пармезан, каперси,
+                                                лимонна заправка</p>
+                                        </div>
+                                        <div class="text-end">
+                                            <span class="price-tag d-block">320 ₴</span>
+                                            <small class="text-muted">200г</small>
+                                        </div>
+                                    </div>
+                                    <div class="menu-item d-flex justify-content-between align-items-start mb-4">
+                                        <div class="me-3">
+                                            <h5 class="mb-1">Тартар з телятини</h5>
+                                            <p class="text-muted small mb-0">Ніжна телятина, цибуля марс, корнішони,
+                                                гірчичний соус</p>
+                                        </div>
+                                        <div class="text-end">
+                                            <span class="price-tag d-block">290 ₴</span>
+                                            <small class="text-muted">180г</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Salads -->
+                        <div class="tab-pane fade" id="salads" role="tabpanel">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="menu-item d-flex justify-content-between align-items-start mb-4">
+                                        <div class="me-3">
+                                            <h5 class="mb-1">Цезар з куркою</h5>
+                                            <p class="text-muted small mb-0">Айсберг, курка гриль, бекон, пармезан,
+                                                чері, соус Цезар</p>
+                                        </div>
+                                        <div class="text-end">
+                                            <span class="price-tag d-block">210 ₴</span>
+                                            <small class="text-muted">250г</small>
+                                        </div>
+                                    </div>
+                                    <div class="menu-item d-flex justify-content-between align-items-start mb-4">
+                                        <div class="me-3">
+                                            <h5 class="mb-1">Салат з прошуто і грушею</h5>
+                                            <p class="text-muted small mb-0">Мікс салату, прошуто, груша, горгонзола,
+                                                медово-гірчичний соус</p>
+                                        </div>
+                                        <div class="text-end">
+                                            <span class="price-tag d-block">240 ₴</span>
+                                            <small class="text-muted">220г</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="menu-item d-flex justify-content-between align-items-start mb-4">
+                                        <div class="me-3">
+                                            <h5 class="mb-1">Грецький</h5>
+                                            <p class="text-muted small mb-0">Свіжі овочі, сир фета, оливки каламата,
+                                                орегано</p>
+                                        </div>
+                                        <div class="text-end">
+                                            <span class="price-tag d-block">180 ₴</span>
+                                            <small class="text-muted">250г</small>
+                                        </div>
+                                    </div>
+                                    <div class="menu-item d-flex justify-content-between align-items-start mb-4">
+                                        <div class="me-3">
+                                            <h5 class="mb-1">Теплий салат з телятиною</h5>
+                                            <p class="text-muted small mb-0">Телятина гриль, овочі гриль, мікс салату,
+                                                бальзамік</p>
+                                        </div>
+                                        <div class="text-end">
+                                            <span class="price-tag d-block">260 ₴</span>
+                                            <small class="text-muted">280г</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Main Dishes -->
+                        <div class="tab-pane fade" id="main" role="tabpanel">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="menu-item d-flex justify-content-between align-items-start mb-4">
+                                        <div class="me-3">
+                                            <h5 class="mb-1">Медальйони з телятини</h5>
+                                            <p class="text-muted small mb-0">З грибним соусом та картопляним пюре</p>
+                                        </div>
+                                        <div class="text-end">
+                                            <span class="price-tag d-block">380 ₴</span>
+                                            <small class="text-muted">300г</small>
+                                        </div>
+                                    </div>
+                                    <div class="menu-item d-flex justify-content-between align-items-start mb-4">
+                                        <div class="me-3">
+                                            <h5 class="mb-1">Качка з яблуками</h5>
+                                            <p class="text-muted small mb-0">Качине філе, карамелізовані яблука,
+                                                ягідний соус</p>
+                                        </div>
+                                        <div class="text-end">
+                                            <span class="price-tag d-block">340 ₴</span>
+                                            <small class="text-muted">280г</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="menu-item d-flex justify-content-between align-items-start mb-4">
+                                        <div class="me-3">
+                                            <h5 class="mb-1">Лосось на грилі</h5>
+                                            <p class="text-muted small mb-0">З овочами wok та вершковим соусом</p>
+                                        </div>
+                                        <div class="text-end">
+                                            <span class="price-tag d-block">420 ₴</span>
+                                            <small class="text-muted">250г</small>
+                                        </div>
+                                    </div>
+                                    <div class="menu-item d-flex justify-content-between align-items-start mb-4">
+                                        <div class="me-3">
+                                            <h5 class="mb-1">Деруни по-королівськи</h5>
+                                            <p class="text-muted small mb-0">З м'ясом та грибною підливою у горщику</p>
+                                        </div>
+                                        <div class="text-end">
+                                            <span class="price-tag d-block">190 ₴</span>
+                                            <small class="text-muted">350г</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Grill -->
+                        <div class="tab-pane fade" id="grill" role="tabpanel">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="menu-item d-flex justify-content-between align-items-start mb-4">
+                                        <div class="me-3">
+                                            <h5 class="mb-1">Шашлик зі свинини</h5>
+                                            <p class="text-muted small mb-0">Ошийок, маринована цибуля, соус</p>
+                                        </div>
+                                        <div class="text-end">
+                                            <span class="price-tag d-block">120 ₴</span>
+                                            <small class="text-muted">за 100г</small>
+                                        </div>
+                                    </div>
+                                    <div class="menu-item d-flex justify-content-between align-items-start mb-4">
+                                        <div class="me-3">
+                                            <h5 class="mb-1">Стейк Рібай</h5>
+                                            <p class="text-muted small mb-0">Яловичина витриманої ферментації</p>
+                                        </div>
+                                        <div class="text-end">
+                                            <span class="price-tag d-block">210 ₴</span>
+                                            <small class="text-muted">за 100г</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="menu-item d-flex justify-content-between align-items-start mb-4">
+                                        <div class="me-3">
+                                            <h5 class="mb-1">Овочі гриль</h5>
+                                            <p class="text-muted small mb-0">Баклажан, кабачок, перець, гриби</p>
+                                        </div>
+                                        <div class="text-end">
+                                            <span class="price-tag d-block">90 ₴</span>
+                                            <small class="text-muted">за 100г</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Desserts -->
+                        <div class="tab-pane fade" id="desserts" role="tabpanel">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="menu-item d-flex justify-content-between align-items-start mb-4">
+                                        <div class="me-3">
+                                            <h5 class="mb-1">Чізкейк Нью-Йорк</h5>
+                                            <p class="text-muted small mb-0">Класичний рецепт з ягідним соусом</p>
+                                        </div>
+                                        <div class="text-end">
+                                            <span class="price-tag d-block">160 ₴</span>
+                                            <small class="text-muted">150г</small>
+                                        </div>
+                                    </div>
+                                    <div class="menu-item d-flex justify-content-between align-items-start mb-4">
+                                        <div class="me-3">
+                                            <h5 class="mb-1">Фондан</h5>
+                                            <p class="text-muted small mb-0">Шоколадний кекс з рідкою серединкою та
+                                                морозивом</p>
+                                        </div>
+                                        <div class="text-end">
+                                            <span class="price-tag d-block">180 ₴</span>
+                                            <small class="text-muted">150/50г</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="menu-item d-flex justify-content-between align-items-start mb-4">
+                                        <div class="me-3">
+                                            <h5 class="mb-1">Наполеон</h5>
+                                            <p class="text-muted small mb-0">За фірмовим рецептом</p>
+                                        </div>
+                                        <div class="text-end">
+                                            <span class="price-tag d-block">150 ₴</span>
+                                            <small class="text-muted">180г</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-center mt-5">
+                        <a href="tel:+380673733133" class="btn btn-green btn-lg px-5 py-3">
+                            <i class="fas fa-phone-alt me-2"></i> Забронювати столик
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacts">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h4 class="footer-title">НА ОЗЕРІ</h4>
+                    <p>Готель-ресторан у Львові, де ви знайдете тепло домашнього затишку.</p>
+                    <div class="social-icons mt-3">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-google-plus"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h4 class="footer-title">Контакти</h4>
+                    <a href="tel:+380673733133" class="contact-link"><i class="fas fa-mobile-alt me-2"></i> +38 067 373
+                        31 33</a>
+                    <a href="tel:+380322970353" class="contact-link"><i class="fas fa-phone me-2"></i> +38 (032)
+                        297-03-53</a>
+                    <a href="tel:+380973443322" class="contact-link"><i class="fab fa-viber me-2"></i> +38 097 344 33 22
+                        (Viber)</a>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h4 class="footer-title">Адреса</h4>
+                    <p>Україна, м. Львів</p>
+                    <p class="text-muted small">Ми знаходимось у затишному куточку міста біля озера.</p>
+                </div>
+            </div>
+            <hr style="border-color: #444;">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="small mb-0">Copyright © 2025 Готель-ресторан «НА ОЗЕРІ». Всі права захищено.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

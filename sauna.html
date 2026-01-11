@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Сауна та басейн в готелі НА ОЗЕРІ у Львові">
+    <title>Сауна - Готель «НА ОЗЕРІ»</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/l10n/uk.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Montserrat:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Готель - НА ОЗЕРІ</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Головна</a></li>
+                    <li class="nav-item"><a class="nav-link" href="hotel.html">Готель</a></li>
+                    <li class="nav-item"><a class="nav-link" href="rooms.html">Номери</a></li>
+                    <li class="nav-item"><a class="nav-link" href="restaurant.html">Ресторан</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sauna.html">Сауна</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacts">Контакти</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a href="tel:+380673733133" class="btn btn-custom btn-sm">
+                            <i class="fas fa-phone-alt me-2"></i>+38 067 373 31 33
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Spacer for fixed navbar -->
+    <div style="height: 100px;"></div>
+
+    <section id="sauna" class="sauna-section">
+        <div class="sauna-wrapper">
+
+            <div class="sauna-header">
+                <small class="section-subtitle">ВІДНОВЛЕННЯ СИЛ</small>
+                <h2 class="section-title">Сауна — душа готелю «НА ОЗЕРІ»</h2>
+                <div class="title-separator"></div>
+            </div>
+
+            <div class="sauna-layout">
+
+                <div class="sauna-media">
+                    <div class="sauna-image-box">
+                        <img src="static/OIP.webp" alt="Інтер'єр дерев'яної сауни" class="main-img">
+                        <div class="img-backdrop"></div>
+                    </div>
+                </div>
+
+                <div class="sauna-info">
+                    <p class="sauna-desc">
+                        Без сауни просто неможливо уявити наш готель. Це саме та родзинка, яка додає рідкісного
+                        задоволення усьому відпочинку.
+                    </p>
+
+                    <div class="sauna-quote">
+                        <p>«Провівши два дні вихідних у нас, попередньо вимкнувши телефон, у вас складеться враження, що
+                            ви відпочивали <strong>тиждень десь за кордоном</strong>».</p>
+                    </div>
+
+                    <h4 class="sauna-list-title">У вашому розпорядженні:</h4>
+
+                    <div class="sauna-features-grid">
+                        <div class="feature-item">
+                            <div class="icon-circle"><i class="fas fa-swimming-pool"></i></div>
+                            <span>Басейн з течією</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="icon-circle"><i class="fas fa-water"></i></div>
+                            <span>Гідромасаж</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="icon-circle"><i class="fas fa-temperature-high"></i></div>
+                            <span>Фінська сауна</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="icon-circle"><i class="fas fa-mug-hot"></i></div>
+                            <span>Чай та посуд</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="icon-circle"><i class="fas fa-spa"></i></div>
+                            <span>Кімната відпочинку</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="icon-circle"><i class="fas fa-check-circle"></i></div>
+                            <span>Повний релакс</span>
+                        </div>
+                    </div>
+
+                    <div class="sauna-actions">
+                        <a href="#contacts" class="btn-sauna">Замовити сауну</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacts">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h4 class="footer-title">НА ОЗЕРІ</h4>
+                    <p>Готель-ресторан у Львові, де ви знайдете тепло домашнього затишку.</p>
+                    <div class="social-icons mt-3">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-google-plus"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h4 class="footer-title">Контакти</h4>
+                    <a href="tel:+380673733133" class="contact-link"><i class="fas fa-mobile-alt me-2"></i> +38 067 373
+                        31 33</a>
+                    <a href="tel:+380322970353" class="contact-link"><i class="fas fa-phone me-2"></i> +38 (032)
+                        297-03-53</a>
+                    <a href="tel:+380973443322" class="contact-link"><i class="fab fa-viber me-2"></i> +38 097 344 33 22
+                        (Viber)</a>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h4 class="footer-title">Адреса</h4>
+                    <p>Україна, м. Львів</p>
+                    <p class="text-muted small">Ми знаходимось у затишному куточку міста біля озера.</p>
+                </div>
+            </div>
+            <hr style="border-color: #444;">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="small mb-0">Copyright © 2025 Готель-ресторан «НА ОЗЕРІ». Всі права захищено.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

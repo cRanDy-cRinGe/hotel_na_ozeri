@@ -1,144 +1,178 @@
 <!DOCTYPE html>
 <html lang="uk">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Деталі номеру | Готель «НА ОЗЕРІ»</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/l10n/uk.js"></script>
 </head>
+
 <body class="room-page-body">
 
-<nav class="navbar navbar-expand-lg fixed-top">
-    <div class="container">
-        <a class="navbar-brand" href="index.html">Готель - НА ОЗЕРІ</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav align-items-center">
-                <li class="nav-item"><a class="nav-link" href="index.html">Головна</a></li>
-                <li class="nav-item"><a class="nav-link" href="index.html#rooms">Номери</a></li>
-                <li class="nav-item ms-lg-3">
-                    <a href="tel:+380673733133" class="btn btn-custom btn-sm">
-                        <i class="fas fa-phone-alt me-2"></i>+38 067 373 31 33
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
-
-<div style="height: 100px;"></div>
-
-<section class="room-details-section mb-5">
-    <div class="container">
-
-        <div class="row mb-4">
-            <div class="col-12">
-                <a href="index.html#rooms" class="back-link"><i class="fas fa-arrow-left me-2"></i>Повернутися до номерів</a>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Готель - НА ОЗЕРІ</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Головна</a></li>
+                    <li class="nav-item"><a class="nav-link" href="hotel.html">Готель</a></li>
+                    <li class="nav-item"><a class="nav-link" href="rooms.html">Номери</a></li>
+                    <li class="nav-item"><a class="nav-link" href="restaurant.html">Ресторан</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sauna.html">Сауна</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacts">Контакти</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a href="tel:+380673733133" class="btn btn-custom btn-sm">
+                            <i class="fas fa-phone-alt me-2"></i>+38 067 373 31 33
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
+    </nav>
 
-        <div class="row">
-            <div class="col-lg-8">
+    <div style="height: 100px;"></div>
 
-                <h1 class="section-title mb-2">Стандарт Double</h1>
-                <div class="room-stars mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+    <section class="room-details-section mb-5">
+        <div class="container">
 
-                <div id="roomCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#roomCarousel" data-bs-slide-to="0" class="active"></button>
-                        <button type="button" data-bs-target="#roomCarousel" data-bs-slide-to="1"></button>
-                        <button type="button" data-bs-target="#roomCarousel" data-bs-slide-to="2"></button>
-                    </div>
-                    <div class="carousel-inner rounded shadow-sm">
-                        <div class="carousel-item active">
-                            <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1200&q=80" class="d-block w-100 room-slider-img" alt="Спальня">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1200&q=80" class="d-block w-100 room-slider-img" alt="Ванна кімната">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="https://images.unsplash.com/photo-1512918760532-3ed64bc8066e?auto=format&fit=crop&w=1200&q=80" class="d-block w-100 room-slider-img" alt="Деталі інтер'єру">
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#roomCarousel" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#roomCarousel" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    </button>
-                </div>
-
-                <h3 class="mb-3 font-playfair">Опис номеру</h3>
-                <p class="text-muted mb-4">
-                    Затишний номер площею 18 м², виконаний у теплих пастельних тонах. Ідеальний вибір для пари або ділової поїздки.
-                    Велике двоспальне ліжко з ортопедичним матрацом гарантує вам міцний сон, а робоча зона дозволить комфортно вирішити справи.
-                    Вікна номеру виходять у тихий внутрішній дворик, що забезпечує тишу та спокій.
-                </p>
-
-                <h3 class="mb-3 font-playfair">Зручності у номері</h3>
-                <div class="row g-3 room-amenities-list mb-5">
-                    <div class="col-md-6"><i class="fas fa-wifi me-2"></i> Швидкісний Wi-Fi</div>
-                    <div class="col-md-6"><i class="fas fa-snowflake me-2"></i> Кондиціонер</div>
-                    <div class="col-md-6"><i class="fas fa-tv me-2"></i> Smart TV 42"</div>
-                    <div class="col-md-6"><i class="fas fa-shower me-2"></i> Душова кабіна</div>
-                    <div class="col-md-6"><i class="fas fa-wind me-2"></i> Фен та косметика</div>
-                    <div class="col-md-6"><i class="fas fa-tshirt me-2"></i> Халати і тапочки</div>
-                    <div class="col-md-6"><i class="fas fa-mug-hot me-2"></i> Електрочайник</div>
-                    <div class="col-md-6"><i class="fas fa-lock me-2"></i> Сейф</div>
+            <div class="row mb-4">
+                <div class="col-12">
+                    <a href="rooms.html" class="back-link"><i class="fas fa-arrow-left me-2"></i>Повернутися до
+                        номерів</a>
+                    номерів</a>
                 </div>
             </div>
 
-            <div class="col-lg-4">
-                <div class="booking-sidebar p-4 rounded shadow-sm">
-                    <div class="price-block mb-3">
-                        <span class="fs-5 text-muted">Ціна за ніч:</span>
-                        <div class="current-price">1100 UAH</div>
+            <div class="row">
+                <div class="col-lg-8">
+
+                    <h1 class="section-title mb-2">Стандарт Double</h1>
+                    <div class="room-stars mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i></div>
+
+                    <div id="roomCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#roomCarousel" data-bs-slide-to="0"
+                                class="active"></button>
+                            <button type="button" data-bs-target="#roomCarousel" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#roomCarousel" data-bs-slide-to="2"></button>
+                        </div>
+                        <div class="carousel-inner rounded shadow-sm">
+                            <div class="carousel-item active">
+                                <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1200&q=80"
+                                    class="d-block w-100 room-slider-img" alt="Спальня">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1200&q=80"
+                                    class="d-block w-100 room-slider-img" alt="Ванна кімната">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://images.unsplash.com/photo-1512918760532-3ed64bc8066e?auto=format&fit=crop&w=1200&q=80"
+                                    class="d-block w-100 room-slider-img" alt="Деталі інтер'єру">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#roomCarousel"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#roomCarousel"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        </button>
                     </div>
 
-                    <ul class="list-unstyled mb-4 text-muted small">
-                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Сніданок включено</li>
-                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Безкоштовне скасування</li>
-                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Оплата при поселенні</li>
-                    </ul>
+                    <h3 class="mb-3 font-playfair">Опис номеру</h3>
+                    <p class="text-muted mb-4">
+                        Затишний номер площею 18 м², виконаний у теплих пастельних тонах. Ідеальний вибір для пари або
+                        ділової поїздки.
+                        Велике двоспальне ліжко з ортопедичним матрацом гарантує вам міцний сон, а робоча зона дозволить
+                        комфортно вирішити справи.
+                        Вікна номеру виходять у тихий внутрішній дворик, що забезпечує тишу та спокій.
+                    </p>
 
-                    <form action="http://naozeri.lviv.ua/booking_ua/index.php?mod=find" method="post">
-                        <div class="mb-3">
-                            <label class="form-label">Дата заїзду</label>
-                            <input type="date" class="form-control" name="FindForm1:arrivalDate">
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Дата виїзду</label>
-                            <input type="date" class="form-control" name="FindForm1:departureDate">
-                        </div>
-                        <button type="submit" class="btn btn-custom w-100 py-3">Забронювати зараз</button>
-                    </form>
+                    <h3 class="mb-3 font-playfair">Зручності у номері</h3>
+                    <div class="row g-3 room-amenities-list mb-5">
+                        <div class="col-md-6"><i class="fas fa-wifi me-2"></i> Швидкісний Wi-Fi</div>
+                        <div class="col-md-6"><i class="fas fa-snowflake me-2"></i> Кондиціонер</div>
+                        <div class="col-md-6"><i class="fas fa-tv me-2"></i> Smart TV 42"</div>
+                        <div class="col-md-6"><i class="fas fa-shower me-2"></i> Душова кабіна</div>
+                        <div class="col-md-6"><i class="fas fa-wind me-2"></i> Фен та косметика</div>
+                        <div class="col-md-6"><i class="fas fa-tshirt me-2"></i> Халати і тапочки</div>
+                        <div class="col-md-6"><i class="fas fa-mug-hot me-2"></i> Електрочайник</div>
+                        <div class="col-md-6"><i class="fas fa-lock me-2"></i> Сейф</div>
+                    </div>
+                </div>
 
-                    <div class="text-center mt-3">
-                        <small class="text-muted">Або телефонуйте:</small><br>
-                        <a href="tel:+380673733133" class="fw-bold text-dark text-decoration-none">+38 067 373 31 33</a>
+                <div class="col-lg-4">
+                    <div class="booking-sidebar p-4 rounded shadow-sm">
+                        <div class="price-block mb-3">
+                            <span class="fs-5 text-muted">Ціна за ніч:</span>
+                            <div class="current-price">1100 UAH</div>
+                        </div>
+
+                        <ul class="list-unstyled mb-4 text-muted small">
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Сніданок включено</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Безкоштовне скасування</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Оплата при поселенні</li>
+                        </ul>
+
+                        <form action="http://naozeri.lviv.ua/booking_ua/index.php?mod=find" method="post">
+                            <div class="mb-3">
+                                <label class="form-label">Дата заїзду</label>
+                                <div class="input-wrapper">
+                                    <i class="far fa-calendar-alt input-icon"></i>
+                                    <input type="date" class="form-control date-picker" name="FindForm1:arrivalDate"
+                                        placeholder="Оберіть дату">
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Дата виїзду</label>
+                                <div class="input-wrapper">
+                                    <i class="far fa-calendar-check input-icon"></i>
+                                    <input type="date" class="form-control date-picker" name="FindForm1:departureDate"
+                                        placeholder="Оберіть дату">
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-custom w-100 py-3">Забронювати зараз</button>
+                        </form>
+
+                        <div class="text-center mt-3">
+                            <small class="text-muted">Або телефонуйте:</small><br>
+                            <a href="tel:+380673733133" class="fw-bold text-dark text-decoration-none">+38 067 373 31
+                                33</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<footer id="contacts">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 text-center">
-                <p class="small mb-0">Copyright © 2025 Готель-ресторан «НА ОЗЕРІ»</p>
+    <footer id="contacts">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="small mb-0">Copyright © 2025 Готель-ресторан «НА ОЗЕРІ»</p>
+                </div>
             </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
