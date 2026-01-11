@@ -423,6 +423,7 @@ h3 {
 /* --- Логіка та стилі випадаючого вікна дат (Flatpickr) --- */
 .flatpickr-calendar {
     font-family: 'Montserrat', sans-serif;
+    background: #fff;
     border: none !important;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2) !important;
     border-radius: 8px !important;
@@ -434,18 +435,44 @@ h3 {
 .flatpickr-day.endRange {
     background: var(--primary-color) !important;
     border-color: var(--primary-color) !important;
+    color: #fff !important;
 }
 
 .flatpickr-day:hover {
     background: #f0f0f0;
 }
 
-.flatpickr-months .flatpickr-month {
-    background: var(--primary-color);
-    color: #fff;
+.flatpickr-day {
+    color: #333 !important;
+}
+
+.flatpickr-day.flatpickr-disabled,
+.flatpickr-day.flatpickr-disabled:hover {
+    color: rgba(0, 0, 0, 0.1) !important;
+}
+
+.flatpickr-months {
+    background: var(--primary-color) !important;
     border-radius: 8px 8px 0 0;
-    height: 50px;
-    padding-top: 15px;
+    height: 60px !important;
+}
+
+.flatpickr-months .flatpickr-month {
+    background: transparent !important;
+    color: #fff !important;
+    height: 60px !important;
+    padding-top: 0 !important;
+}
+
+.flatpickr-current-month {
+    padding: 0 !important;
+    color: #fff !important;
+    background: transparent !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 60px !important;
+    top: 0 !important;
 }
 
 .flatpickr-current-month .flatpickr-monthDropdown-months,
@@ -455,12 +482,14 @@ h3 {
 }
 
 .flatpickr-weekdays {
-    background: var(--primary-color);
+    background: var(--primary-color) !important;
+    height: 35px;
 }
 
 .flatpickr-weekday {
-    color: rgba(255, 255, 255, 0.8) !important;
-    font-weight: 400;
+    background: var(--primary-color) !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-weight: 600;
 }
 
 /* Стрілки навігації календаря (білі) */
@@ -468,12 +497,16 @@ h3 {
 .flatpickr-months .flatpickr-next-month {
     fill: #fff !important;
     color: #fff !important;
-    padding-top: 10px;
+    padding: 0 !important;
+    height: 60px !important;
+    display: flex !important;
+    align-items: center !important;
+    z-index: 10;
 }
 
 .flatpickr-months .flatpickr-prev-month:hover svg,
 .flatpickr-months .flatpickr-next-month:hover svg {
-    fill: #ddd !important;
+    fill: rgba(255, 255, 255, 0.7) !important;
 }
 
 /* Випадаючий список вибору місяця (фікс сірого фону) */
