@@ -175,6 +175,13 @@ h3 {
     animation: fadeInUp 1s ease-out forwards;
 }
 
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+
+}
+
 .hero-subtitle {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.3rem;
@@ -562,6 +569,13 @@ h3 {
     position: relative;
     padding-bottom: 20px;
     padding-right: 20px;
+}
+
+@media (max-width: 480px) {
+    .about-img-wrapper {
+        padding-bottom: 10px;
+        padding-right: 0;
+    }
 }
 
 .about-img-wrapper .main-img {
@@ -1439,4 +1453,139 @@ footer {
 
 .phone-link-minimal:hover i {
     transform: scale(1.2) rotate(-10deg);
+}
+
+/* ==========================================================================
+   Mobile Optimization (max-width: 768px)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+
+    /* --- Typography fixes --- */
+    .hero-title {
+        font-size: 2.8rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .section-title-sm {
+        font-size: 1.6rem;
+    }
+
+    .navbar-brand {
+        font-size: 1.6rem;
+    }
+
+    .experience-badge .years {
+        font-size: 2rem;
+    }
+
+    .room-title {
+        font-size: 1.3rem;
+    }
+
+    .footer-title {
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+    }
+
+    /* --- Spacing & Layout --- */
+    .section-padding {
+        padding: 60px 0;
+    }
+
+    .about-section {
+        padding: 50px 0;
+    }
+
+    .hero-section {
+        height: 75vh;
+    }
+
+    .hero-btn {
+        padding: 15px 35px;
+        font-size: 0.85rem;
+    }
+
+    /* Fix for side-by-side images in restaurant/gallery sections */
+    .col-6.mt-5 {
+        margin-top: 15px !important;
+    }
+
+    /* Ensuring all .col-6 become .col-12 in specific mobile breakages */
+    .restaurant-gallery-fix .col-6 {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    /* Refined Restaurant Atmosphere Grid */
+    .atmosphere-grid .col-6 {
+        padding: 5px !important;
+    }
+
+    .atmosphere-grid .mt-4,
+    .atmosphere-grid .mt-5 {
+        margin-top: 5px !important;
+    }
+
+    .atmosphere-grid img {
+        height: 180px !important;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    /* Menu Section Mobile Optimization */
+    .menu-section .nav-pills {
+        gap: 8px;
+        padding: 0 10px;
+    }
+
+    .menu-section .nav-pills .nav-item {
+        margin: 0 !important;
+        flex: 1 1 calc(50% - 8px);
+        /* Two buttons per row */
+    }
+
+    .menu-section .nav-pills .nav-link {
+        width: 100%;
+        padding: 10px 5px !important;
+        font-size: 0.75rem !important;
+        white-space: normal;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .menu-item {
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+
+    .menu-item h5 {
+        font-size: 1rem;
+    }
+
+    .menu-item .price-tag {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-brand {
+        font-size: 1.4rem;
+    }
+
+    .hero-title {
+        font-size: 2.4rem;
+    }
 }
